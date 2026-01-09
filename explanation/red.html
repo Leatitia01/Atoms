@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High-Grade Oils | ATOM Negoce & Consulting</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <style>
+        :root {
+            --brand-blue: #0B123A;
+            --brand-gold: #D4AF37;
+            --pure-white: #ffffff;
+        }
+
+        body { font-family: 'Poppins', sans-serif; background-color: #f8f9fa; color: #333; top: 0px !important; }
+
+        /* --- GOOGLE TRANSLATE --- */
+        #google_translate_element { margin-left: 15px; }
+        .goog-te-gadget-simple {
+            background-color: rgba(255,255,255,0.1) !important;
+            border: 1px solid var(--brand-gold) !important;
+            padding: 5px 10px !important; border-radius: 8px !important;
+        }
+        .goog-te-gadget-simple span { color: white !important; }
+
+        /* --- NAVIGATION --- */
+        .navbar { background: var(--brand-blue) !important; border-bottom: 3px solid var(--brand-gold); padding: 12px 0; }
+        .nav-link { color: white !important; font-weight: 500; transition: 0.3s; margin: 0 10px; }
+        .nav-link:hover { color: var(--brand-gold) !important; }
+
+        /* --- OIL HERO --- */
+        .oil-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(11, 18, 58, 0.7), rgba(11, 18, 58, 0.5)), 
+                        url('https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&q=80');
+            background-size: cover; background-position: center;
+            display: flex; align-items: center; color: white; text-align: center;
+        }
+
+        /* --- CONTENT CARDS --- */
+        .oil-card {
+            border: none; border-radius: 25px; background: white;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08); overflow: hidden;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            height: 100%;
+        }
+        .oil-card:hover { transform: translateY(-15px); box-shadow: 0 25px 50px rgba(212, 175, 55, 0.2); }
+        
+        .oil-feature-icon {
+            width: 70px; height: 70px; background: var(--brand-gold);
+            color: var(--brand-blue); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.8rem; margin: 0 auto 20px;
+        }
+
+        /* --- WHATSAPP BUTTON --- */
+        .btn-gold-action {
+            background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+            color: white; font-weight: 800; padding: 18px 45px;
+            border-radius: 50px; border: none; transition: 0.4s;
+            text-decoration: none; display: inline-block;
+        }
+        .btn-gold-action:hover { transform: scale(1.05); box-shadow: 0 10px 25px rgba(184, 134, 11, 0.4); color: white; }
+
+        footer { background: var(--brand-blue); color: white; padding: 40px 0; margin-top: 60px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <span style="color: var(--brand-gold);">ATOM</span> NEGOCE
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../service.html">SERVICES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="agro.html">🔙AGRO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contact.html">CONTACT</a></li>
+                    <li class="nav-item" id="google_translate_element"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="oil-hero">
+        <div class="container">
+            <h1 class="display-3 fw-bold reveal-top">High-Grade Premium Oil</h1>
+            <p class="lead reveal-bottom fs-3">Clear, healthy, and versatile for all premium cooking needs.</p>
+        </div>
+    </header>
+
+    <section class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 reveal-left">
+                <h2 class="fw-bold mb-4" style="color: var(--brand-blue);">Superior <span style="color: var(--brand-gold);">Refining Standards</span></h2>
+                <p class="lead text-muted">Our high-grade oils undergo a triple-filtration process to ensure maximum purity and a high smoke point, making them perfect for both professional chefs and home kitchens.</p>
+                <div class="row mt-4 g-3">
+                    <div class="col-6">
+                        <div class="p-3 border-start border-4 border-gold bg-white shadow-sm">
+                            <h5 class="fw-bold mb-1">Healthy</h5>
+                            <p class="small mb-0">Zero cholesterol & Vitamin A/E enriched.</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="p-3 border-start border-4 border-gold bg-white shadow-sm">
+                            <h5 class="fw-bold mb-1">Versatile</h5>
+                            <p class="small mb-0">Ideal for frying, baking, and dressing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 reveal-right">
+                <img src="https://images.unsplash.com/photo-1541512416146-3cf58d6b27cc?auto=format&fit=crop&q=80" class="img-fluid rounded-5 shadow-lg" alt="Clear Oil Pouring">
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section class="bg-white py-5">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-5 reveal-top">Premium <span style="color: var(--brand-gold);">Specifications</span></h2>
+            <div class="row g-4">
+                <div class="col-md-4 reveal-bottom">
+                    <div class="oil-card p-5">
+                        <div class="oil-feature-icon"><i class="fas fa-certificate"></i></div>
+                        <h4 class="fw-bold">Triple Refined</h4>
+                        <p class="text-muted">Crystal clear appearance with no impurities, meeting international food safety standards (SGS/ISO).</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal-bottom">
+                    <div class="oil-card p-5">
+                        <div class="oil-feature-icon"><i class="fas fa-vial"></i></div>
+                        <h4 class="fw-bold">Health Fortified</h4>
+                        <p class="text-muted">Naturally rich in Omega-6 and Omega-9 fatty acids to support heart health and vitality.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal-bottom">
+                    <div class="oil-card p-5">
+                        <div class="oil-feature-icon"><i class="fas fa-boxes"></i></div>
+                        <h4 class="fw-bold">Flexible Export</h4>
+                        <p class="text-muted">Available in various sizes: 1L, 5L, and 20L Jerry cans or Flexibags for bulk distribution.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5 text-center">
+        <div class="reveal-bottom py-5">
+            <h2 class="display-5 fw-bold mb-4">Request a Wholesale Quote</h2>
+            <p class="lead mb-5">Join our network of international distributors and supply the finest oil to your market.</p>
+            <a href="javascript:void(0)" onclick="sendOilWhatsApp()" class="btn-gold-action">
+                <i class="fab fa-whatsapp me-2"></i> Discuss Bulk Supply
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <p>© 2009 ATOM Negoce & Consulting | High-Grade Oil Division</p>
+            <p class="small" style="color: var(--brand-gold);">Quality You Can See. Health You Can Taste.</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,fr,es,zh-CN,de', 
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function sendOilWhatsApp() {
+            const number = "237652212955"; 
+            const message = "Hello ATOM Negoce! ✨%0A%0AWe are interested in your *High-Grade Premium Oil* supply.%0A%0AWe would like to discuss bulk pricing and export availability. Please get back to us! 🛢️🌱";
+            window.open(`https://wa.me/${number}?text=${message}`, '_blank');
+        }
+
+        ScrollReveal().reveal('.reveal-top', { origin: 'top', distance: '50px', duration: 1000 });
+        ScrollReveal().reveal('.reveal-bottom', { origin: 'bottom', distance: '50px', duration: 1000 });
+        ScrollReveal().reveal('.reveal-left', { origin: 'left', distance: '80px', duration: 1200 });
+        ScrollReveal().reveal('.reveal-right', { origin: 'right', distance: '80px', duration: 1200 });
+    </script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wholesale Brown Beans | ATOM Negoce & Consulting</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <style>
+        :root {
+            --brand-primary: #0a192f; /* Deep Midnight Blue */
+            --brand-gold: #c5a059;    /* Metallic Gold */
+            --brand-gold-light: #e2c275;
+            --brand-dark: #050c16;
+        }
+
+        body { 
+            font-family: 'Segoe UI', Roboto, sans-serif; 
+            background-color: #fcfcfc; 
+            overflow-x: hidden; 
+            top: 0px !important; 
+        }
+
+        /* --- GOOGLE TRANSLATE CUSTOM STYLE --- */
+        #google_translate_element { 
+            display: inline-block; 
+            vertical-align: middle; 
+        }
+        .goog-te-gadget-simple { 
+            background-color: rgba(255, 255, 255, 0.05) !important; 
+            border: 1px solid var(--brand-gold) !important; 
+            padding: 4px 8px !important; 
+            border-radius: 50px !important; 
+        }
+        .goog-te-gadget-simple span { color: white !important; font-size: 12px !important; }
+        .goog-te-banner-frame.skiptranslate { display: none !important; }
+        body { top: 0px !important; }
+
+        /* --- NAVIGATION --- */
+        .main-navbar { background-color: var(--brand-primary); padding: 15px 0; z-index: 1100; border-bottom: 2px solid var(--brand-gold); }
+        .navbar-sticky { padding: 5px 0; background-color: var(--brand-dark) !important; position: fixed; top: 0; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+
+        @media (min-width: 992px) {
+            .navbar-nav { width: 42%; display: flex; align-items: center; }
+            .nav-left { justify-content: flex-end; }
+            .nav-right { justify-content: flex-start; }
+            .navbar-brand-center { width: 16%; display: flex; justify-content: center; position: relative; }
+            .logo-container {
+                width: 100px; height: 100px; background: white; border-radius: 50%;
+                display: flex; justify-content: center; align-items: center;
+                border: 4px solid var(--brand-gold); position: absolute; top: -30px; 
+                animation: logo-bounce 3s infinite ease-in-out;
+                z-index: 10;
+            }
+        }
+
+        @keyframes logo-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+        .logo-container img { width: 70%; }
+
+        /* --- HERO --- */
+        .hero-section {
+            height: 50vh;
+            background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(5, 12, 22, 0.9)), 
+                        url('https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&q=80');
+            background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; color: white; text-align: center;
+            border-bottom: 5px solid var(--brand-gold);
+        }
+
+        /* --- CARDS --- */
+        .specs-card { 
+            background: white; border-radius: 20px; padding: 30px; 
+            border-top: 5px solid var(--brand-gold); height: 100%; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+        }
+        
+        .bean-img-wrapper {
+            position: relative; border-radius: 20px; overflow: hidden;
+            border: 3px solid var(--brand-gold); box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .bean-img { width: 100%; height: 350px; object-fit: cover; transition: 0.6s; }
+        .bean-img:hover { transform: scale(1.1); }
+        
+        .doc-box { 
+            background: white; border-left: 5px solid var(--brand-gold); 
+            border-radius: 12px; padding: 18px; margin-bottom: 15px; 
+            transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        }
+        .doc-box:hover { transform: translateX(10px); background: #fcf9f2; }
+
+        .btn-gold {
+            background: var(--brand-gold); color: var(--brand-primary);
+            font-weight: 700; border-radius: 50px; padding: 12px 35px;
+            transition: 0.3s; border: none;
+        }
+        .btn-gold:hover { background: var(--brand-gold-light); transform: translateY(-3px); }
+
+        #scrollTop {
+            position: fixed; bottom: 30px; right: 30px; display: none;
+            width: 50px; height: 50px; border-radius: 50%; background: var(--brand-gold);
+            color: var(--brand-primary); border: none; z-index: 2000; cursor: pointer;
+        }
+
+        @media (max-width: 991px) {
+            .logo-container { width: 60px; height: 60px; background: white; border-radius: 50%; display: flex; justify-content: center; border: 2px solid var(--brand-gold); }
+            .navbar-collapse { background: var(--brand-primary); padding: 20px; border-radius: 10px; border: 1px solid var(--brand-gold); margin-top: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <button id="scrollTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <nav class="main-navbar navbar navbar-expand-lg sticky-top" id="navbar">
+        <div class="container">
+            <button class="navbar-toggler border-0 order-last" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" style="background: var(--brand-gold);">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="navbar-brand-center">
+                <a href="index.html" class="logo-container">
+                    <img src="8769bb1d-ce11-4522-81ee-21a376e2b7f4.jpg" alt="ATOM">
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav nav-left mt-3 mt-lg-0">
+                    <li class="nav-item"><a class="nav-link text-white fw-bold px-3" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-bold px-3" href="about.html">ABOUT</a></li>
+                </ul>
+                <ul class="navbar-nav nav-right">
+                    <li class="nav-item"><a class="nav-link text-white fw-bold px-3 active" href="explanation/agro.html">🔙TRADE</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-bold px-3 me-lg-3" href="contact.html">CONTACT</a></li>
+                    <li class="nav-item d-flex align-items-center">
+                        <div id="google_translate_element"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="display-3 fw-bold reveal-top" style="color: var(--brand-gold-light);">Wholesale Brown Beans</h1>
+            <p class="lead reveal-bottom fs-3 opacity-75">Cameroon's Finest Export-Grade Pulses</p>
+        </div>
+    </header>
+
+    <section class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-7 reveal-left">
+                <h2 class="fw-bold mb-4" style="color: var(--brand-primary);">Global Export Standards</h2>
+                <div class="specs-card">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <i class="fas fa-check-double text-success fs-4 mb-2"></i>
+                            <h5 class="fw-bold">Purity Level</h5>
+                            <p class="text-muted small">99% purity guaranteed. Machine-cleaned and hand-picked options available.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <i class="fas fa-warehouse text-gold fs-4 mb-2" style="color: var(--brand-gold);"></i>
+                            <h5 class="fw-bold">Bulk Capacity</h5>
+                            <p class="text-muted small">Ready supply of up to 100,000 metric tons per harvest cycle.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <i class="fas fa-box-open text-warning fs-4 mb-2"></i>
+                            <h5 class="fw-bold">Packaging</h5>
+                            <p class="text-muted small">Standard 50kg bags or custom private-label retail packaging.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <i class="fas fa-anchor text-info fs-4 mb-2"></i>
+                            <h5 class="fw-bold">Logistics</h5>
+                            <p class="text-muted small">Strategic shipping from Douala port to any global destination.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 reveal-right">
+                <div class="bean-img-wrapper">
+                    <img src="BEANS.jpeg" class="bean-img" alt="Brown Beans Wholesale">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-6 reveal-bottom">
+                    <h2 class="fw-bold mb-4" style="color: var(--brand-primary);">The ATOM Trading Advantage</h2>
+                    <div class="doc-box"><strong>Direct Sourcing:</strong> No middlemen. We work directly with Cameroonian cooperatives.</div>
+                    <div class="doc-box"><strong>Quality Verification:</strong> Pre-shipment inspections by SGS or Bureau Veritas.</div>
+                    <div class="doc-box"><strong>Market Intelligence:</strong> We provide real-time pricing trends for global buyers.</div>
+                </div>
+                <div class="col-lg-6 reveal-bottom" style="transition-delay: 0.2s;">
+                    <h2 class="fw-bold mb-4" style="color: var(--brand-primary);">Required Documentation</h2>
+                    <div class="doc-box"><i class="fas fa-file-invoice text-gold me-2" style="color: var(--brand-gold);"></i> Certificate of Origin & Phytosanitary</div>
+                    <div class="doc-box"><i class="fas fa-file-signature text-gold me-2" style="color: var(--brand-gold);"></i> Fumigation & Weight Certificates</div>
+                    <div class="doc-box"><i class="fas fa-file-contract text-gold me-2" style="color: var(--brand-gold);"></i> Export License & Customs Declarations</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container py-5 text-center">
+        <div class="p-5 rounded-4 shadow-lg text-white reveal-top" style="background: linear-gradient(var(--brand-primary), var(--brand-dark)); border: 2px solid var(--brand-gold);">
+            <h2 class="fw-bold mb-3" style="color: var(--brand-gold-light);">Request a Commercial Quote</h2>
+            <p class="mb-4 opacity-75">Connect with our commodity experts for volume discounts and shipping timelines.</p>
+            <a href="contact.html" class="btn btn-gold btn-lg">Contact Trade Desk</a>
+        </div>
+    </div>
+
+    <footer class="text-center py-5 text-white" style="background: var(--brand-dark); border-top: 5px solid var(--brand-gold);">
+        <p class="mb-0 opacity-50">© 2026 ATOM Negoce & Consulting | Global Commodities Division</p>
+    </footer>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // ANIMATION CONFIG
+        ScrollReveal().reveal('.reveal-top', { distance: '40px', origin: 'top', duration: 1000 });
+        ScrollReveal().reveal('.reveal-bottom', { distance: '40px', origin: 'bottom', duration: 1000 });
+        ScrollReveal().reveal('.reveal-left', { distance: '60px', origin: 'left', duration: 1200 });
+        ScrollReveal().reveal('.reveal-right', { distance: '60px', origin: 'right', duration: 1200 });
+
+        // NAVBAR SCROLL EFFECT
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('navbar');
+            const scrollBtn = document.getElementById('scrollTop');
+            if (window.scrollY > 50) { 
+                nav.classList.add('navbar-sticky'); 
+                scrollBtn.style.display = "block"; 
+            } else { 
+                nav.classList.remove('navbar-sticky'); 
+                scrollBtn.style.display = "none"; 
+            }
+        });
+    </script>
+</body>
+</html>

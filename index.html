@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATOM Negoce & Consulting | Global Trade Solutions</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* --- BRAND COLORS --- */
+        :root {
+            --brand-primary: #0044cc;
+            --brand-secondary: #00aaff;
+            --brand-dark: #14172B;
+            --text-light: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            overflow-x: hidden;
+            background-color: #f8f9fa;
+            top: 0px !important; 
+        }
+
+        /* --- GOOGLE TRANSLATE STYLING --- */
+        #google_translate_element {
+            display: inline-block;
+        }
+        .goog-te-gadget-simple {
+            background-color: transparent !important;
+            border: 1px solid rgba(255,255,255,0.2) !important;
+            padding: 2px 8px !important;
+            border-radius: 4px !important;
+            cursor: pointer;
+        }
+        .goog-te-gadget-simple span {
+            color: white !important;
+            font-size: 0.75rem !important;
+            font-weight: bold;
+        }
+        .goog-te-banner-frame.skiptranslate { display: none !important; }
+
+        /* --- 1. TOP BAR --- */
+        .top-bar {
+            background-color: var(--brand-dark);
+            color: white;
+            font-size: 0.85rem;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* --- 2. DYNAMIC NAVBAR --- */
+        .main-navbar {
+            background-color: var(--brand-primary);
+            padding: 15px 0;
+            transition: all 0.4s ease;
+            z-index: 1000;
+        }
+
+        .navbar-sticky {
+            padding: 5px 0;
+            background-color: rgba(20, 23, 43, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        .nav-link {
+            color: rgba(255,255,255,0.9) !important;
+            font-weight: 600;
+            margin: 0 12px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background-color: var(--brand-secondary);
+            transition: 0.3s;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::after { width: 100%; }
+
+        /* --- 3. THE FLOATING LOGO --- */
+        .navbar-brand-center {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 140px; 
+        }
+
+        .logo-container {
+            position: absolute;
+            top: -25px;
+            width: 110px;
+            height: 110px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            z-index: 10;
+            transition: all 0.4s ease;
+            border: 4px solid var(--brand-secondary);
+        }
+
+        .navbar-sticky .logo-container {
+            width: 80px;
+            height: 80px;
+            top: -10px;
+        }
+
+        .logo-container img {
+            width: 75%;
+            height: auto;
+        }
+
+        .logo-ring {
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            top: -50px;
+            pointer-events: none;
+            z-index: 5;
+            animation: spin 10s linear infinite;
+        }
+
+        @keyframes spin { from {transform: rotate(0deg);} to {transform: rotate(360deg);} }
+
+        /* --- 4. HERO SECTION --- */
+        .hero-section {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(rgba(0, 68, 204, 0.8), rgba(20, 23, 43, 0.9)), 
+                        url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=2000'); 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero-text {
+            z-index: 10;
+            margin-top: 60px;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- 5. SERVICE CARDS --- */
+        .service-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            background: white;
+            border-top: 5px solid var(--brand-primary);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--brand-primary);
+            margin-bottom: 20px;
+        }
+
+        /* --- 6. FOOTER --- */
+        footer {
+            background-color: var(--brand-dark);
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        footer h5 { color: white; border-left: 3px solid var(--brand-secondary); padding-left: 10px; margin-bottom: 20px; }
+        footer a { color: #ccc; text-decoration: none; transition: 0.3s; }
+        footer a:hover { color: var(--brand-secondary); }
+
+        @media (max-width: 991px) {
+            .navbar-brand-center { display: none; }
+            .logo-mobile { width: 60px; background: white; border-radius: 50%; padding: 5px; }
+            .navbar-collapse { background: var(--brand-dark); padding: 20px; border-radius: 15px; margin-top: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="contact-links">
+                <span class="me-3"><i class="fas fa-envelope text-info me-1"></i> courriel@atnegco.com</span>
+                <span class="d-none d-md-inline"><i class="fas fa-phone text-info me-1"></i> +31 610290294</span>
+                <span class="d-none d-md-inline"><i class="fas fa-phone text-info me-1"></i> +237 652212955</span>
+            </div>
+            <div class="social-links d-flex align-items-center">
+                <div id="google_translate_element"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg main-navbar navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-lg-none" href="#">
+                <img src="8769bb1d-ce11-4522-81ee-21a376e2b7f4.jpg" alt="Logo" class="logo-mobile">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                </ul>
+
+                <div class="navbar-brand-center mx-lg-5 d-none d-lg-flex">
+                    <svg class="logo-ring" viewBox="0 0 200 200">
+                        <circle cx="100" cy="100" r="90" fill="none" stroke="rgba(0,170,255,0.3)" stroke-width="2" stroke-dasharray="10 5" />
+                    </svg>
+                    <div class="logo-container">
+                        <img src="8769bb1d-ce11-4522-81ee-21a376e2b7f4.jpg" alt="ATOM"> 
+                    </div>
+                </div>
+
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="offers.html">Opportunities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="business.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container hero-text">
+            <h1 class="display-2 fw-bold mb-3">Empowering Global Trade</h1>
+            <p class="lead mb-4 mx-auto" style="max-width: 700px;">
+                Providing concrete, reliable, and tailor-made solutions for African and international businesses.
+            </p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="services.html" class="btn btn-info btn-lg px-4 py-2 rounded-pill fw-bold text-white">Our Services</a>
+                <a href="contact.html" class="btn btn-outline-light btn-lg px-4 py-2 rounded-pill">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-primary text-uppercase fw-bold">Our Mission</h6>
+                <h2 class="display-5 fw-bold">Connecting Markets Across Borders</h2>
+                <hr class="mx-auto bg-primary" style="width: 80px; height: 3px; opacity: 1;">
+            </div>
+            <div class="row g-4 mt-4">
+                <div class="col-md-4">
+                    <div class="card service-card p-4 h-100 text-center">
+                        <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+                        <h4>Partnership Development</h4>
+                        <p class="text-muted">Strategic intermediary between producers, buyers, and investors globally.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card service-card p-4 h-100 text-center">
+                        <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h4>Risk Management</h4>
+                        <p class="text-muted">Legal compliance and financial risk coverage for international transactions.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card service-card p-4 h-100 text-center">
+                        <div class="service-icon"><i class="fas fa-box-open"></i></div>
+                        <h4>Supply Chain</h4>
+                        <p class="text-muted">Optimizing procurement, negotiating lead times, and solving disputes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="display-6 fw-bold mb-4">Why Choose ATOM?</h2>
+                    <ul class="list-unstyled">
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-check-circle text-info me-3 mt-1"></i>
+                            <div><strong>Verified International Network:</strong> Reach across Africa, Asia, Europe, and America.</div>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-check-circle text-info me-3 mt-1"></i>
+                            <div><strong>On-the-Ground Expertise:</strong> Deep knowledge of high-growth emerging zones.</div>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-check-circle text-info me-3 mt-1"></i>
+                            <div><strong>Tailored Strategy:</strong> Solutions for SMEs and large-scale investors alike.</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <img src="istockphoto-1947499362-612x612.jpg" class="img-fluid rounded-4 shadow" alt="Expertise">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5>ATOM Negoce & Consulting</h5>
+                    <p>Your premier partner in international trade, brokerage, and strategic business consulting.</p>
+                    <div class="mt-4">
+                        <a href="https://www.linkedin.com/in/amy-ange-ndjetouga-21a078375" class="me-3 fs-4"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/share/17rTGmg7Eb/" class="me-3 fs-4"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Home</a></li>
+                        <li class="mb-2"><a href="#about">About</a></li>
+                        <li class="mb-2"><a href="#services">Services</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Commodity Trading</a></li>
+                        <li class="mb-2"><a href="#">Market Research</a></li>
+                        <li class="mb-2"><a href="#">Customs Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-3"><i class="fas fa-envelope text-info me-2"></i> courriel@atnegco.com</li>
+                        <li class="mb-3"><i class="fas fa-phone text-info me-2"></i> +31 610290294</li>
+                        <li class="mb-3"><i class="fas fa-map-marker-alt text-info me-2"></i> Global Operations Center</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center pt-5 border-top border-secondary mt-5">
+                <p class="small">&copy; 2009 ATOM Negoce & Consulting. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                // ONLY: English, French, German, Chinese Simplified
+                includedLanguages: 'en,fr,de,zh-CN',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Navbar Sticky Logic
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('.main-navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('navbar-sticky');
+            } else {
+                nav.classList.remove('navbar-sticky');
+            }
+        });
+    </script>
+</body>
+</html>

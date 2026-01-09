@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Offers & Travel | ATOM Negoce & Consulting</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <style>
+        :root {
+            --brand-primary: #0044cc;
+            --brand-secondary: #00aaff;
+            --brand-dark: #14172B; /* Midnight Blue from your style */
+            --brand-gold: #D4AF37; /* Premium Gold */
+            --bg-light: #f4f7f9;
+        }
+
+        body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg-light); top: 0px !important; }
+
+        /* --- NAVIGATION (Gold & Midnight Blue Style) --- */
+        .main-navbar { 
+            background-color: var(--brand-dark); 
+            padding: 15px 0; 
+            z-index: 1100; 
+            border-bottom: 3px solid var(--brand-gold); 
+            transition: 0.4s; 
+        }
+        .navbar-sticky { 
+            padding: 8px 0; 
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3); 
+        }
+
+        .logo-container {
+            width: 100px; height: 100px; background: white; border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            border: 4px solid var(--brand-gold); transition: 0.4s;
+        }
+        .logo-container img { width: 75%; }
+
+        @media (min-width: 992px) {
+            .navbar-nav { width: 42%; display: flex; align-items: center; }
+            .nav-left { justify-content: flex-end; }
+            .nav-right { justify-content: flex-start; }
+            .navbar-brand-center { width: 16%; display: flex; justify-content: center; position: relative; }
+            .logo-container { position: absolute; top: -30px; animation: logo-glow 3s infinite ease-in-out; }
+        }
+
+        @keyframes logo-glow { 
+            0%, 100% { box-shadow: 0 0 10px var(--brand-gold); } 
+            50% { box-shadow: 0 0 25px var(--brand-gold); } 
+        }
+
+        .nav-link { color: white !important; font-weight: 600; text-transform: uppercase; transition: 0.3s; font-size: 0.9rem; }
+        .nav-link:hover, .nav-link.active { color: var(--brand-gold) !important; }
+
+        /* --- TRANSLATOR --- */
+        #google_translate_element { margin-left: 15px; }
+        .goog-te-gadget-simple { 
+            background: rgba(255,255,255,0.1) !important; 
+            border: 1px solid var(--brand-gold) !important; 
+            padding: 5px 12px !important; 
+            border-radius: 30px !important; 
+        }
+        .goog-te-gadget-simple span { color: white !important; }
+
+        /* --- Hero Section --- */
+        .offers-hero {
+            background: linear-gradient(rgba(0, 26, 77, 0.7), rgba(0, 68, 204, 0.5)), 
+                        url('8769bb1d-ce11-4522-81ee-21a376e2b7f4.jpg');
+            padding: 120px 0;
+            color: white;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
+
+        /* --- Offer Cards --- */
+        .offer-card {
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+            background: white;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            height: 100%;
+        }
+        .offer-card:hover { transform: translateY(-15px); box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2); }
+
+        .offer-img-wrapper { height: 220px; overflow: hidden; position: relative; }
+        .offer-img-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+        .offer-card:hover .offer-img-wrapper img { transform: scale(1.1); }
+
+        .offer-badge {
+            position: absolute; top: 15px; right: 15px;
+            background: var(--brand-gold); color: var(--brand-dark);
+            padding: 5px 15px; border-radius: 50px; font-size: 0.8rem; font-weight: bold;
+        }
+
+        .offer-content { padding: 25px; }
+        .offer-content h4 { color: var(--brand-dark); font-weight: 700; }
+        
+        .btn-brand {
+            background-color: var(--brand-dark);
+            color: white;
+            border: 1px solid var(--brand-gold);
+            border-radius: 50px;
+            padding: 10px 25px;
+            transition: 0.3s;
+        }
+        .btn-brand:hover { background-color: var(--brand-gold); color: var(--brand-dark); }
+
+        .client-consultation {
+            background: white; border-radius: 30px; padding: 50px;
+            margin-top: 50px; border-left: 10px solid var(--brand-gold);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="main-navbar navbar navbar-expand-lg sticky-top" id="navbar">
+        <div class="container">
+            <button class="navbar-toggler border-0 order-last" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" style="background: var(--brand-gold);">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-brand-center">
+                <a href="index.html" class="logo-container">
+                    <img src="8769bb1d-ce11-4522-81ee-21a376e2b7f4.jpg" alt="ATOM">
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse text-center" id="navContent">
+                <ul class="navbar-nav nav-left mt-3 mt-lg-0">
+                    <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="services.html">Services</a></li>
+                </ul>
+                <ul class="navbar-nav nav-right">
+                    <li class="nav-item"><a class="nav-link px-3 active" href="offers.html">Opportunities</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="business.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="contact.html">Contact</a></li>
+                    <li class="nav-item d-flex justify-content-center"><div id="google_translate_element"></div></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="offers-hero">
+        <div class="container">
+            <h1 class="display-3 fw-bold reveal-top">OPPORTUNITY OFFER</h1>
+            <p class="lead reveal-bottom">TITLED LAND FOR PARTNERSHIP AND PROJECT DEVELOPMENT.</p>
+        </div>
+    </header>
+
+    <section class="container py-5">
+        <div class="text-center mb-5 reveal-bottom">
+            <h2 class="fw-bold">Business Opportunity Offers</h2>
+            <p class="text-muted">Explore our specialized solutions designed for global success.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4 reveal-left">
+                <div class="offer-card">
+                    <div class="offer-img-wrapper">
+                        <span class="offer-badge">Fast Track</span>
+                        <img src="visa.jpeg" alt="E-Visa">
+                    </div>
+                    <div class="offer-content text-center">
+                        <h4>Global E-Visa Support</h4>
+                        <p class="text-muted">Simplified digital visa processing for business travelers across all continents.</p>
+                        <a href="explanation/evisa.html" class="btn btn-brand">See More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 reveal-bottom">
+                <div class="offer-card">
+                    <div class="offer-img-wrapper">
+                        <img src="visa app.jpeg" alt="Visa Application">
+                    </div>
+                    <div class="offer-content text-center">
+                        <h4>Real Estate Partnership.</h4>
+                        <p class="text-muted">We offer titled, legally secured land in strategic locations for partnerships aimed at developing high-value projects</p>
+                        <a href="REAL-ESTATE2.html" class="btn btn-brand">See More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 reveal-right">
+                <div class="offer-card">
+                    <div class="offer-img-wrapper">
+                        <img src="bus.jpeg" alt="Transportation">
+                    </div>
+                    <div class="offer-content text-center">
+                        <h4>Executive Transport</h4>
+                        <p class="text-muted">VIP logistics and local transportation for business missions and cargo.</p>
+                        <a href="explanation/transportation.html" class="btn btn-brand">See More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 reveal-left">
+                <div class="offer-card">
+                    <div class="offer-img-wrapper">
+                        <img src="terrain.jpeg" alt="Agro-Trade">
+                    </div>
+                    <div class="offer-content text-center">
+                        <h4>Natural Products & Agro-Trade</h4>
+                        <p class="text-muted">Direct from Farm, Premium Quality to build trust with your customers.</p>
+                        <a href="explanation/agro.html" class="btn btn-brand">See More</a>
+                    </div>
+                </div>
+            </div>
+ <div class="col-md-4 reveal-right">
+                <div class="offer-card">
+                    <div class="offer-img-wrapper">
+                        <img src="gold.jpeg" alt="football">
+                    </div>
+                    <div class="offer-content text-center">
+                        <h4>Gold Bar Purchase & Resale</h4>
+                        <p class="text-muted"> Gold is a highly sought-after asset, easily resold on financial and commercial markets</p>
+                        <a href="gold.html" class="btn btn-brand">See More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 reveal-right">
+                <div class="offer-card">
+                    <div class="offer-img-wrapper">
+                        <img src="hh.jpeg" alt="football">
+                    </div>
+                    <div class="offer-content text-center">
+                        <h4>Young Talented Athletes Available</h4>
+                        <p class="text-muted">Well-educated, talented, and ambitious players.</p>
+                        <a href="explanation/football.html" class="btn btn-brand">See More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 reveal-left">
+                <div class="client-consultation shadow-sm d-flex align-items-center">
+                    <div class="me-4"><i class="fas fa-comments-alt fa-4x text-primary"></i></div>
+                    <div>
+                        <h3 class="fw-bold">Speak to our Experts</h3>
+                        <p>Dedicated consultation channels for our premium clients. We speak your language.</p>
+                        <button class="btn btn-outline-primary rounded-pill">Schedule a Call</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 reveal-right">
+                <div class="client-consultation shadow-sm d-flex align-items-center border-info" style="border-left-color: var(--brand-secondary);">
+                    <div class="me-4"><i class="fas fa-globe-africa fa-4x text-info"></i></div>
+                    <div>
+                        <h3 class="fw-bold">Market Entry Support</h3>
+                        <p>Unlock the African market with ATOM. Connections you need to succeed in Yaoundé.</p>
+                        <button class="btn btn-outline-info rounded-pill">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-5 bg-dark text-white">
+        <div class="container">
+            <p class="mb-0">© 2009 ATOM Negoce & Consulting SARL</p>
+            <p class="small text-muted">Poste Centrale, Yaoundé, Cameroun</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en', 
+                includedLanguages: 'fr,en,zh-CN,es,de', // French, English, Chinese, Spanish, German
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        ScrollReveal().reveal('.reveal-top', { distance: '50px', origin: 'top', duration: 1000 });
+        ScrollReveal().reveal('.reveal-bottom', { distance: '50px', origin: 'bottom', duration: 1000 });
+        ScrollReveal().reveal('.reveal-left', { distance: '80px', origin: 'left', duration: 1200 });
+        ScrollReveal().reveal('.reveal-right', { distance: '80px', origin: 'right', duration: 1200 });
+
+        window.onscroll = function() {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) nav.classList.add('navbar-sticky');
+            else nav.classList.remove('navbar-sticky');
+        };
+    </script>
+</body>
+</html>

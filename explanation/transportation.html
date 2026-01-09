@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment & Fleet | ATOM Negoce & Consulting</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <style>
+        :root {
+            --brand-primary: #0044cc;
+            --brand-secondary: #00aaff;
+            --brand-dark: #1e2446;
+            --accent-gold: #FFD700;
+        }
+
+        body { font-family: 'Segoe UI', Roboto, sans-serif; background-color: #f4f7f9; overflow-x: hidden; top: 0px !important; }
+
+        /* --- GOOGLE TRANSLATE CUSTOM STYLE --- */
+        #google_translate_element { margin-left: 15px; align-self: center; }
+        .goog-te-gadget-simple { 
+            background-color: rgba(255,255,255,0.1) !important; 
+            border: 1px solid rgba(255,255,255,0.3) !important; 
+            padding: 5px !important; border-radius: 4px !important;
+            cursor: pointer;
+        }
+        .goog-te-gadget-simple span { color: white !important; font-size: 12px; }
+        .goog-te-banner-frame.skiptranslate { display: none !important; } 
+
+        /* --- LOGO ANIMATION --- */
+        @keyframes logoPulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 170, 255, 0.4); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(0, 170, 255, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 170, 255, 0); }
+        }
+
+        .logo-container {
+            width: 110px; height: 110px; background: white; border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            border: 4px solid var(--brand-secondary); position: absolute; top: -30px;
+            animation: logoPulse 4s infinite ease-in-out;
+            transition: 0.5s; z-index: 1101;
+        }
+
+        /* --- NAVIGATION --- */
+        .main-navbar { background-color: var(--brand-primary); padding: 10px 0; transition: 0.4s; z-index: 1100; }
+        .navbar-sticky { background-color: rgba(20, 23, 43, 0.98) !important; position: fixed; top: 0; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+
+        @media (min-width: 992px) {
+            .navbar-nav { width: 42%; }
+            .nav-left { justify-content: flex-end; }
+            .nav-right { justify-content: flex-start; }
+            .navbar-brand-center { width: 16%; display: flex; justify-content: center; position: relative; }
+        }
+
+        /* --- HERO --- */
+        .hero-section {
+            padding: 140px 0 80px;
+            background: linear-gradient(rgba(0, 26, 77, 0.7), rgba(0, 68, 204, 0.5)), 
+                        url('../car.jpeg');
+            background-size: cover;
+             background-position: center;
+             color: white;
+        }
+
+        /* --- FIXED CONTENT STYLES --- */
+        .project-card { 
+            background: white; 
+            border-radius: 15px; 
+            padding: 20px; 
+            height: auto; /* Reduced size from 100% */
+            transition: 0.3s; 
+            border-left: 5px solid var(--brand-primary); 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .project-card:hover { transform: translateY(-3px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
+        
+        .equal-height-fix {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .fleet-card {
+            background: white; border-radius: 15px; overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            transition: 0.4s; height: 100%; border: 1px solid #eee;
+        }
+        .fleet-card:hover { transform: translateY(-10px); }
+        .fleet-img-wrapper { width: 100%; height: 220px; overflow: hidden; }
+        .fleet-img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .investment-tag { background: rgba(0, 170, 255, 0.1); color: var(--brand-primary); padding: 5px 15px; border-radius: 50px; font-weight: 600; font-size: 0.9rem; display: inline-block; margin-bottom: 10px; }
+
+        footer { background: #161b39; color: #faf9f9; padding: 40px 0; }
+    </style>
+</head>
+<body>
+
+    <nav class="main-navbar navbar navbar-expand-lg" id="navbar">
+        <div class="container">
+            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-brand-center">
+                <a href="../index.html" class="logo-container">
+                    <img src="../8769bb1d-ce11-4522-81ee-21a376e2b7f4.jpg" alt="ATOM" style="width:75%;" onerror="this.src='https://via.placeholder.com/80?text=ATOM'">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav nav-left">
+                    <li class="nav-item"><a class="nav-link text-white fw-bold px-3" href="../index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-bold px-3" href="../about.html">ABOUT</a></li>
+                </ul>
+                <ul class="navbar-nav nav-right">
+                    <li class="nav-item"><a class="nav-link text-white fw-bold px-3 active" href="#">INVESTMENT</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-bold px-3" href="../contact.html">CONTACT</a></li>
+                    <li id="google_translate_element"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-3 fw-bold reveal-top">Luxury Private Transport</h1>
+            <p class="lead reveal-bottom"> Creation of a luxury private transportation and  transport company</p>
+        </div>
+    </header>
+
+    <section class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-7 reveal-left">
+                <span class="investment-tag">Project Proposal</span>
+                <h2 class="fw-bold mb-4">Establishing a Modern Transportation Powerhouse</h2>
+                <p class="lead text-muted">We are seeking an investor/financial partner to establish a modern transportation company, combining premium VIP service with high-volume intercity public transport.</p>
+                
+                <div class="row mt-4">
+                    <div class="col-md-6 mb-3">
+                        <div class="p-3 bg-white rounded-3 shadow-sm border-top border-primary border-4">
+                            <h5 class="fw-bold"><i class="fas fa-crown text-primary me-2"></i> Luxury Private</h5>
+                            <p class="small text-muted mb-0">VIP services for business clients, delegations, and expatriates.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="p-3 bg-white rounded-3 shadow-sm border-top border-info border-4">
+                            <h5 class="fw-bold"><i class="fas fa-bus text-info me-2"></i> Intercity Public</h5>
+                            <p class="small text-muted mb-0">Premium air-conditioned buses with digital booking systems.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 reveal-right text-center">
+                <img src="../acaafg.jpeg" class="img-fluid rounded-4 shadow-lg" alt="Transport Hub">
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="text-center mb-5 reveal-bottom">
+                <h2 class="fw-bold">Our Planned Fleet Model</h2>
+                <p class="text-muted">High-end vehicles tailored for diverse market needs.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 reveal-bottom">
+                    <div class="fleet-card">
+                        <div class="fleet-img-wrapper">
+                            <img src="../WhatsApp Image 2025-12-26 at 7.55.59 AM.jpeg" alt="Executive Sedan" onerror="this.src='https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80'">
+                        </div>
+                        <div class="fleet-info p-3">
+                            <h5 class="fw-bold">Premium Sedans</h5>
+                            <p class="text-muted small">Toyota Camry / Mercedes-Benz for individual executive travel.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal-bottom" style="transition-delay: 0.1s;">
+                    <div class="fleet-card">
+                        <div class="fleet-img-wrapper">
+                            <img src="../car.jpeg" alt="Luxury SUV" onerror="this.src='https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80'">
+                        </div>
+                        <div class="fleet-info p-3">
+                            <h5 class="fw-bold">High-End SUVs / VVIP</h5>
+                            <p class="text-muted small">Maximum security and comfort for site visits and delegation travel.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal-bottom" style="transition-delay: 0.2s;">
+                    <div class="fleet-card">
+                        <div class="fleet-img-wrapper">
+                            <img src="../bus2.jpeg" alt="Premium Bus" onerror="this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80'">
+                        </div>
+                        <div class="fleet-info p-3">
+                            <h5 class="fw-bold">Modern Intercity Buses</h5>
+                            <p class="text-muted small">30-50 seaters with modern air-conditioning and GPS tracking.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <div class="row g-4">
+            <div class="col-lg-6 reveal-left equal-height-fix">
+                <h3 class="fw-bold mb-4">Why Invest in this Project?</h3>
+                <div class="project-card mb-3">
+                    <h5 class="fw-bold"><i class="fas fa-chart-line text-success me-2"></i> Profitable Market</h5>
+                    <p class="small mb-0">High margins on luxury rentals combined with guaranteed daily flow from intercity transport.</p>
+                </div>
+                <div class="project-card mb-3">
+                    <h5 class="fw-bold"><i class="fas fa-mobile-alt text-primary me-2"></i> Modern & Innovative</h5>
+                    <p class="small mb-0">App-based booking, mobile payments, and 24/7 customer service integration.</p>
+                </div>
+                <div class="project-card mb-3">
+                    <h5 class="fw-bold"><i class="fas fa-expand-arrows-alt text-info me-2"></i> Expansion Potential</h5>
+                    <p class="small mb-0">Roadmap includes school transport, long-term leasing, and transition to electric fleets.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 reveal-right">
+                <div class="p-5 bg-primary text-white rounded-5 shadow-lg h-100 d-flex flex-column justify-content-center">
+                    <h3 class="fw-bold mb-4">Partnership Opportunities</h3>
+                    <p class="lead">We are seeking strategic and financial partners for national and sub-regional development.</p>
+                    <ul class="list-unstyled mt-4">
+                        <li class="mb-3"><i class="fas fa-handshake me-2 text-warning"></i> <strong>Investor:</strong> Financial contribution for fleet and logistics.</li>
+                        <li class="mb-3"><i class="fas fa-map-marked-alt me-2 text-warning"></i> <strong>Strategic Partner:</strong> Development of intercity city terminals.</li>
+                    </ul>
+                    <div class="mt-4 p-3 bg-white rounded-3 text-dark small shadow-sm">
+                        <p class="mb-1 fw-bold">📑 Available Documents:</p>
+                        <i class="fas fa-file-pdf text-danger me-1"></i> Market Study | <i class="fas fa-file-invoice-dollar text-success me-1"></i> ROI Plan
+                    </div>
+                    <a href="contact.html" class="btn btn-warning btn-lg rounded-pill fw-bold w-100 mt-4 shadow">Submit Inquiry</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-4">
+        <div class="container">
+            <p class="mb-0 text-muted small">© 2009 ATOM Negoce & Consulting | Transforming Mobility in Africa</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,fr,es,ar,zh-CN,tr',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const sr = ScrollReveal();
+        sr.reveal('.reveal-top', { distance: '30px', origin: 'top', duration: 800 });
+        sr.reveal('.reveal-bottom', { distance: '30px', origin: 'bottom', duration: 800 });
+        sr.reveal('.reveal-left', { distance: '50px', origin: 'left', duration: 1000 });
+        sr.reveal('.reveal-right', { distance: '50px', origin: 'right', duration: 1000 });
+
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) { 
+                nav.classList.add('navbar-sticky'); 
+            } else { 
+                nav.classList.remove('navbar-sticky'); 
+            }
+        });
+    </script>
+</body>
+</html>

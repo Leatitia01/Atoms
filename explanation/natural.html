@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Supply Partnership | ATOM Negoce & Consulting</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <style>
+        :root {
+            --brand-dark: #0B123A;   /* Deep Midnight Blue */
+            --brand-gold: #D4AF37;   /* Metallic Gold */
+            --brand-gold-soft: #F9E29C;
+            --text-gray: #f8f9fa;
+        }
+
+        body { font-family: 'Poppins', sans-serif; background-color: #ffffff; color: #333; overflow-x: hidden; top: 0px !important; }
+
+        /* --- GOOGLE TRANSLATE --- */
+        #google_translate_element { margin-left: 15px; }
+        .goog-te-gadget-simple {
+            background-color: rgba(255,255,255,0.1) !important;
+            border: 1px solid var(--brand-gold) !important;
+            padding: 5px 10px !important;
+            border-radius: 5px !important;
+        }
+        .goog-te-gadget-simple span { color: white !important; font-size: 13px; }
+
+        /* --- NAVIGATION --- */
+        .navbar { background: var(--brand-dark); border-bottom: 3px solid var(--brand-gold); padding: 15px 0; }
+        .nav-link { color: white !important; font-weight: 500; transition: 0.3s; margin: 0 10px; }
+        .nav-link:hover { color: var(--brand-gold) !important; }
+
+        /* --- HERO SECTION --- */
+        .supply-hero {
+            height: 70vh;
+            background: linear-gradient(rgba(11, 18, 58, 0.85), rgba(11, 18, 58, 0.7)), 
+                        url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80');
+            background-size: cover; background-position: center;
+            display: flex; align-items: center; color: white; text-align: center;
+        }
+        .gold-line { width: 100px; height: 4px; background: var(--brand-gold); margin: 20px auto; }
+
+        /* --- PRODUCT CARDS --- */
+        .category-card {
+            border: none; border-radius: 15px; overflow: hidden;
+            background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: 0.4s ease; height: 100%; border-left: 5px solid var(--brand-dark);
+        }
+        .category-card:hover { transform: scale(1.05); border-left-color: var(--brand-gold); }
+        .category-icon { font-size: 2.5rem; color: var(--brand-gold); margin-bottom: 15px; }
+
+        /* --- STRENGTHS SECTION --- */
+        .strengths-box { background: var(--brand-dark); color: white; border-radius: 30px; padding: 50px; position: relative; }
+        .strength-item { border-bottom: 1px solid rgba(212, 175, 55, 0.2); padding: 15px 0; display: flex; align-items: center; }
+        .strength-item i { color: var(--brand-gold); margin-right: 15px; font-size: 1.2rem; }
+
+        /* --- WHATSAPP BUTTON --- */
+        .btn-supply {
+            background: var(--brand-gold); color: var(--brand-dark);
+            font-weight: 800; padding: 18px 40px; border-radius: 50px;
+            border: none; transition: 0.4s; text-transform: uppercase;
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+        .btn-supply:hover { background: white; transform: translateY(-5px); color: var(--brand-dark); }
+
+        /* --- FOOTER --- */
+        footer { background: #05081a; color: #777; padding: 40px 0; border-top: 4px solid var(--brand-gold); }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <span style="color: var(--brand-gold);">ATOM</span> NEGOCE
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tradeNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="tradeNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="agro.html">🔙LOGISTICS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contact.html">CONTACT</a></li>
+                    <li class="nav-item" id="google_translate_element"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="supply-hero">
+        <div class="container">
+            <h1 class="display-3 fw-bold reveal-top">OFFICIAL PARTNERSHIP OFFER</h1>
+            <div class="gold-line"></div>
+            <p class="lead reveal-bottom fs-3">Seeking International Suppliers for the African Market</p>
+            <p class="reveal-bottom mt-3">Strategic Representation • Exclusive Distribution • Market Expansion</p>
+        </div>
+    </header>
+
+    <section class="container py-5">
+        <div class="text-center mb-5 reveal-top">
+            <h2 class="fw-bold" style="color: var(--brand-dark);">Priority <span style="color: var(--brand-gold);">Product Areas</span></h2>
+            <p class="text-muted">We are looking for manufacturers in the following sectors:</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-3 reveal-left">
+                <div class="category-card p-4 text-center">
+                    <i class="fas fa-seedling category-icon"></i>
+                    <h5 class="fw-bold">Rice Varieties</h5>
+                    <p class="small text-muted">Broken, Long Grain, Fragrant, Parboiled (5kg - 50kg)</p>
+                </div>
+            </div>
+            <div class="col-md-3 reveal-bottom">
+                <div class="category-card p-4 text-center">
+                    <i class="fas fa-tint category-icon"></i>
+                    <h5 class="fw-bold">Vegetable Oils</h5>
+                    <p class="small text-muted">Sunflower, Palm, Soybean, Peanut (1L - 20L)</p>
+                </div>
+            </div>
+            <div class="col-md-3 reveal-bottom">
+                <div class="category-card p-4 text-center">
+                    <i class="fas fa-solar-panel category-icon"></i>
+                    <h5 class="fw-bold">Solar Energy</h5>
+                    <p class="small text-muted">Panels (350W-550W), Inverters, Batteries, Kits</p>
+                </div>
+            </div>
+            <div class="col-md-3 reveal-right">
+                <div class="category-card p-4 text-center">
+                    <i class="fas fa-boxes category-icon"></i>
+                    <h5 class="fw-bold">Commodities</h5>
+                    <p class="small text-muted">Sugar, Flour, Cement, Fertilizer, Household Goods</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section class="py-5" style="background: #f4f7fe;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 reveal-left">
+                    <h2 class="fw-bold mb-4" style="color: var(--brand-dark);">Why Partner With <span style="color: var(--brand-gold);">ATOM?</span></h2>
+                    <p>We provide an immediate commercial presence in Africa without the high setup costs. Our trained sales and logistics teams manage everything from import to marketing.</p>
+                    
+                    <div class="strengths-box mt-4">
+                        <div class="strength-item"><i class="fas fa-check-circle"></i> Active network in multiple African countries</div>
+                        <div class="strength-item"><i class="fas fa-check-circle"></i> Partnerships with major city wholesalers</div>
+                        <div class="strength-item"><i class="fas fa-check-circle"></i> Dedicated sales, logistics, and marketing teams</div>
+                        <div class="strength-item"><i class="fas fa-check-circle"></i> Large-scale government & supermarket portfolio</div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0 reveal-right">
+                    <div class="p-4 bg-white rounded-4 shadow">
+                        <h4 class="fw-bold text-center mb-4">Collaboration Models</h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>A. Exclusive Representation:</strong> Direct mandate for targeted countries.</li>
+                            <li class="list-group-item"><strong>B. Standard Distribution:</strong> Direct wholesale purchase & resale.</li>
+                            <li class="list-group-item"><strong>C. Warehouse/Stocking:</strong> Buffer stock management for speed.</li>
+                            <li class="list-group-item"><strong>D. Brand Co-development:</strong> Custom branding for African markets.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <div class="container my-5 py-5 text-center">
+        <div class="reveal-bottom">
+            <h2 class="display-5 fw-bold mb-4">Ready to Export to Africa?</h2>
+            <p class="lead mb-5 mx-auto" style="max-width: 800px;">We are available for an introductory meeting to discuss terms and provide our company licenses and distribution profiles.</p>
+            
+            <button onclick="sendToWhatsApp()" class="btn-supply">
+                <i class="fab fa-whatsapp me-2"></i> Discuss Strategic Partnership
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <p class="mb-0">© 2009 ATOM Negoce & Consulting | International Trade Division</p>
+            <p class="small">Transparency • Reliability • Performance</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,fr,es,zh-CN,de', 
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function sendToWhatsApp() {
+            const number = "237652212955"; 
+            const message = "Hello ATOM Negoce! ✨%0A%0AWe are an international supplier interested in your *Strategic Partnership Offer* for the African market.%0A%0APlease, we would like to schedule an introductory meeting to discuss distribution terms. 🤝";
+            window.open(`https://wa.me/${number}?text=${message}`, '_blank');
+        }
+
+        ScrollReveal().reveal('.reveal-top', { origin: 'top', distance: '50px', duration: 1000 });
+        ScrollReveal().reveal('.reveal-bottom', { origin: 'bottom', distance: '50px', duration: 1000 });
+        ScrollReveal().reveal('.reveal-left', { origin: 'left', distance: '80px', duration: 1200 });
+        ScrollReveal().reveal('.reveal-right', { origin: 'right', distance: '80px', duration: 1200 });
+    </script>
+</body>
+</html>

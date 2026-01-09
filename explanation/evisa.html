@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Visa Services | ATOM Negoce & Consulting</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <style>
+        :root {
+            --brand-primary: #0044cc;
+            --brand-secondary: #00aaff;
+            --brand-dark: #14172B;
+            --bg-light: #f4f7f9;
+            --text-muted: #6c757d;
+        }
+
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: var(--bg-light); 
+            color: #333; 
+            overflow-x: hidden; 
+            top: 0px !important; 
+        }
+
+        /* --- GOOGLE TRANSLATE STYLING --- */
+        #google_translate_element { display: inline-block; vertical-align: middle; }
+        .goog-te-gadget-simple { 
+            background: transparent !important; 
+            border: 1px solid rgba(255,255,255,0.2) !important; 
+            padding: 4px 8px; 
+            border-radius: 5px; 
+        }
+        .goog-te-gadget-simple span { color: white !important; font-size: 0.8rem !important; }
+
+        /* --- NAVIGATION SYSTEM --- */
+        .top-bar { background: var(--brand-dark); color: white; padding: 8px 0; font-size: 0.8rem; }
+        
+        .main-navbar {
+            background-color: var(--brand-primary);
+            padding: 20px 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1050;
+        }
+
+        .navbar-sticky {
+            padding: 10px 0 !important;
+            background: rgba(20, 23, 43, 0.98) !important;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        .nav-link {
+            color: white !important;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            padding: 10px 15px !important;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover, .nav-link.active { color: var(--brand-secondary) !important; }
+
+        /* Center Logo logic for Desktop */
+        .navbar-brand-center {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1100;
+        }
+
+        @keyframes logoPulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 170, 255, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(0, 170, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 170, 255, 0); }
+        }
+
+        .logo-container {
+            width: 105px;
+            height: 105px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 4px solid var(--brand-secondary);
+            animation: logoPulse 2s infinite;
+            transition: 0.4s ease;
+            margin-top: -5px;
+        }
+
+        .navbar-sticky .logo-container {
+            width: 80px;
+            height: 80px;
+            margin-top: 0;
+        }
+
+        .logo-container img { width: 75%; transition: 0.8s; }
+        .logo-container:hover img { transform: rotate(360deg); }
+
+        /* --- HERO SECTION --- */
+        .service-hero-section {
+            position: relative;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(0, 26, 77, 0.75), rgba(0, 68, 204, 0.5)), 
+                        url('../visa.jpeg');
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+            animation: slowZoom 20s infinite alternate;
+        }
+
+        @keyframes slowZoom { from { transform: scale(1); } to { transform: scale(1.1); } }
+        .service-hero-content { position: relative; z-index: 2; }
+
+        /* --- PULSING BUTTON --- */
+        .btn-pulse {
+            background: var(--brand-primary);
+            color: white !important;
+            padding: 16px 45px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0 5px 15px rgba(0, 68, 204, 0.4);
+            animation: pulseBtn 2s infinite;
+            transition: 0.4s;
+            display: inline-block;
+            text-decoration: none;
+            border: none;
+        }
+
+        @keyframes pulseBtn {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 68, 204, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(0, 68, 204, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 68, 204, 0); }
+        }
+
+        .btn-pulse:hover { background: var(--brand-secondary); transform: scale(1.1); animation: none; }
+
+        /* --- HOW IT WORKS SECTION --- */
+        .steps-section { background: var(--brand-dark); color: white; padding: 80px 0; }
+        .step-card {
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 15px;
+            height: 100%;
+            transition: 0.3s;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .step-card:hover { background: rgba(255,255,255,0.1); transform: translateY(-5px); }
+        .step-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--brand-secondary);
+            opacity: 0.5;
+            line-height: 1;
+            margin-bottom: 15px;
+        }
+
+        /* --- RESPONSIVE FIXES --- */
+        @media (max-width: 991px) {
+            .navbar-brand-center { position: static; transform: none; display: none !important; }
+            .logo-mobile-nav { width: 55px; background: white; border-radius: 50%; padding: 5px; border: 2px solid var(--brand-secondary); }
+            .navbar-collapse { 
+                background: rgba(20, 23, 43, 0.98); 
+                margin-top: 15px; 
+                padding: 20px; 
+                border-radius: 10px; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div><i class="fas fa-envelope text-info me-2"></i> courriel@atnegco.com</div>
+            <div id="google_translate_element"></div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg main-navbar navbar-dark sticky-top">
+        <div class="container position-relative">
+            
+            <a class="navbar-brand d-lg-none" href="../index.html">
+                <img src="../8769bb1d-ce11-4522-81ee-21a376e2b7f4.jpg" alt="Logo" class="logo-mobile-nav">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto w-100 justify-content-start">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../services.html">Services</a></li>
+                </ul>
+
+                <div class="navbar-brand-center d-none d-lg-flex">
+                    <a href="../index.html" class="logo-container">
+                        <img src="../8769bb1d-ce11-4522-81ee-21a376e2b7f4.jpg" alt="ATOM Logo"> 
+                    </a>
+                </div>
+
+                <ul class="navbar-nav ms-auto w-100 justify-content-end">
+                    <li class="nav-item"><a class="nav-link active" href="../offers.html">Back to Offers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="service-hero-section">
+        <div class="hero-bg"></div>
+        <div class="service-hero-content container">
+            <h1 class="reveal-top display-3 fw-bold">Global E-Visa Solutions</h1>
+            <p class="lead reveal-bottom fs-4">Fast, Secure, and Professional Visa Support for International Growth.</p>
+        </div>
+    </header>
+
+    <section class="container py-5 mt-4">
+        <div class="row align-items-center gx-5">
+            <div class="col-lg-6 reveal-left">
+                <h2 class="fw-bold text-primary mb-4">Simplifying Your Global Travel</h2>
+                <p class="lead text-muted">Complexity shouldn't be a barrier to your expansion.</p>
+                <p>At ATOM Negoce & Consulting, we streamline the entire visa application process. From document validation to consulate submission, our team ensures your business travel is uninterrupted and legally compliant.</p>
+                <div class="mt-4">
+                    <a href="../contact.html" class="btn-pulse text-white">Apply for Visa Now</a>
+                </div>
+            </div>
+            <div class="col-lg-6 reveal-right mt-5 mt-lg-0 text-center">
+                <img src="../e_visa.jpeg" class="img-fluid rounded-4 shadow-lg" alt="E-Visa Services">
+            </div>
+        </div>
+    </section>
+
+    <section class="steps-section">
+        <div class="container">
+            <div class="text-center mb-5 reveal-bottom">
+                <h2 class="fw-bold">How the Process Works</h2>
+                <p class="text-white-50">Four simple steps to your destination.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3 reveal-bottom">
+                    <div class="step-card">
+                        <div class="step-number">01</div>
+                        <h5>Upload Data</h5>
+                        <p class="small text-white-50">Securely send your passport and requirements to our team.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 reveal-bottom" style="transition-delay: 0.1s;">
+                    <div class="step-card">
+                        <div class="step-number">02</div>
+                        <h5>Expert Review</h5>
+                        <p class="small text-white-50">Our legal specialists verify every detail for 100% accuracy.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 reveal-bottom" style="transition-delay: 0.2s;">
+                    <div class="step-card">
+                        <div class="step-number">03</div>
+                        <h5>Submission</h5>
+                        <p class="small text-white-50">We process the filing through our priority embassy channels.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 reveal-bottom" style="transition-delay: 0.3s;">
+                    <div class="step-card">
+                        <div class="step-number">04</div>
+                        <h5>Approval</h5>
+                        <p class="small text-white-50">Receive your verified E-Visa directly in your email inbox.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-5 bg-white border-top">
+        <div class="container">
+            <p class="fw-bold text-primary mb-1">ATOM Negoce & Consulting</p>
+            <p class="text-muted small">© 2009. Global Reach. Local Expertise.</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,fr,de,zh-CN',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Scroll Animations
+        ScrollReveal().reveal('.reveal-top', { distance: '40px', origin: 'top', duration: 1000 });
+        ScrollReveal().reveal('.reveal-bottom', { distance: '40px', origin: 'bottom', duration: 1000 });
+        ScrollReveal().reveal('.reveal-left', { distance: '60px', origin: 'left', duration: 1200 });
+        ScrollReveal().reveal('.reveal-right', { distance: '60px', origin: 'right', duration: 1200 });
+
+        // Sticky Navbar Toggle
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('.main-navbar');
+            if (window.scrollY > 60) nav.classList.add('navbar-sticky');
+            else nav.classList.remove('navbar-sticky');
+        });
+    </script>
+</body>
+</html>

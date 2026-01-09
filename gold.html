@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Bar Partnership | ATOM Negoce & Consulting</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <style>
+        :root {
+            --brand-primary: #0a192f;
+            --brand-gold: #c5a059;
+            --brand-gold-light: #e2c275;
+            --brand-dark: #050c16;
+            --gold-gradient: linear-gradient(135deg, #c5a059 0%, #f9e29c 50%, #8a6d3b 100%);
+        }
+
+        body { font-family: 'Segoe UI', Roboto, sans-serif; background-color: #fcfcfc; overflow-x: hidden; top: 0px !important; }
+
+        /* --- NAVIGATION & RESPONSIVE LOGO --- */
+        .main-navbar { background-color: var(--brand-primary); padding: 10px 0; z-index: 1100; border-bottom: 2px solid var(--brand-gold); transition: 0.4s; }
+        .navbar-sticky { background-color: var(--brand-dark) !important; position: fixed; top: 0; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); padding: 5px 0; }
+
+        .logo-container {
+            width: 80px; height: 80px; background: white; border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            border: 3px solid var(--brand-gold); transition: 0.4s;
+        }
+        .logo-container img { width: 70%; }
+
+        @media (min-width: 992px) {
+            .navbar-nav { width: 42%; display: flex; align-items: center; }
+            .nav-left { justify-content: flex-end; }
+            .nav-right { justify-content: flex-start; }
+            .navbar-brand-center { width: 16%; display: flex; justify-content: center; position: relative; }
+            .logo-container { width: 110px; height: 110px; border: 4px solid var(--brand-gold); position: absolute; top: -30px; animation: logo-bounce 3s infinite ease-in-out; }
+        }
+
+        @keyframes logo-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+        /* --- HERO RESPONSIVENESS --- */
+        .hero-section {
+            min-height: 40vh;
+            background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(5, 12, 22, 0.9)), 
+                        url('https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&q=80');
+            background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; color: white;
+            border-bottom: 5px solid var(--brand-gold); padding: 40px 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 { font-size: 2rem; }
+            .hero-section p { font-size: 1.1rem !important; }
+        }
+
+        /* --- CARDS & ITEMS --- */
+        .gold-card { 
+            background: white; border-radius: 20px; padding: 25px; border-top: 5px solid var(--brand-gold); 
+            height: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.4s;
+        }
+        .gold-card:hover { transform: translateY(-10px); }
+        
+        .purity-badge { background: var(--gold-gradient); color: var(--brand-primary); padding: 6px 12px; border-radius: 5px; font-weight: 800; font-size: 0.85rem; }
+        
+        .security-item { 
+            display: flex; align-items: center; background: #fffcf5; border: 1px solid var(--brand-gold); 
+            border-radius: 12px; padding: 12px; margin-bottom: 12px; font-weight: 600; color: var(--brand-primary);
+        }
+        .security-item i { color: var(--brand-gold); font-size: 1.2rem; margin-right: 12px; }
+
+        .img-feature { border-radius: 20px; border: 2px solid var(--brand-gold); box-shadow: 0 15px 35px rgba(0,0,0,0.2); width: 100%; }
+
+        .cta-gold { 
+            background: var(--gold-gradient); color: var(--brand-primary) !important; border: none; 
+            border-radius: 50px; font-weight: 800; padding: 15px 40px; transition: 0.3s; width: 100%; max-width: 300px;
+        }
+
+        /* --- GOOGLE TRANSLATE MOBILE --- */
+        #google_translate_element { margin-top: 10px; }
+        .goog-te-gadget-simple { background: rgba(255,255,255,0.1) !important; border: 1px solid var(--brand-gold) !important; border-radius: 20px; padding: 5px 10px; }
+        .goog-te-gadget-simple span { color: white !important; }
+
+        footer { background: var(--brand-dark); color: #888; padding: 30px 0; border-top: 4px solid var(--brand-gold); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <nav class="main-navbar navbar navbar-expand-lg sticky-top" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand d-lg-none">
+                <div class="logo-container" style="width: 60px; height: 60px;">
+                    <img src="8769bb1d-ce11-4522-81ee-21a376e2b7f4.jpg" alt="ATOM">
+                </div>
+            </a>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" style="background: var(--brand-gold);">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-brand-center d-none d-lg-flex">
+                <a href="index.html" class="logo-container">
+                    <img src="8769bb1d-ce11-4522-81ee-21a376e2b7f4.jpg" alt="ATOM">
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse text-center" id="navContent">
+                <ul class="navbar-nav nav-left mt-3 mt-lg-0">
+                    <li class="nav-item"><a class="nav-link text-white fw-bold px-3" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-bold px-3" href="about.html">ABOUT</a></li>
+                </ul>
+                <ul class="navbar-nav nav-right">
+                    <li class="nav-item"><a class="nav-link text-white fw-bold px-3 active" href="offers.html">🔙GOLD</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-bold px-3 me-lg-3" href="contact.html">CONTACT</a></li>
+                    <li class="nav-item"><div id="google_translate_element"></div></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold reveal-top" style="color: var(--brand-gold-light);">Gold Bar Partnership</h1>
+            <p class="lead reveal-bottom fs-5 opacity-75">Physical Asset Acquisition & International Trade</p>
+        </div>
+    </header>
+
+    <section class="container py-5">
+        <div class="row g-4 align-items-center">
+            <div class="col-lg-6 order-2 order-lg-1 reveal-left">
+                <h3 class="fw-bold mb-4" style="color: var(--brand-primary);">Opportunity Parameters</h3>
+                <div class="gold-card">
+                    <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4">
+                        <span class="purity-badge">24K / 98.5% PURITY</span>
+                        <h5 class="fw-bold mb-0" style="color: var(--brand-gold);">2,000 KG+</h5>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li class="mb-4">
+                            <h6 class="fw-bold"><i class="fas fa-map-marker-alt text-warning me-2"></i> Strategic Regions</h6>
+                            <p class="small text-muted mb-0">Direct supply channels from Central & West African certified mining hubs.</p>
+                        </li>
+                        <li class="mb-4">
+                            <h6 class="fw-bold"><i class="fas fa-cube text-warning me-2"></i> Standardized Format</h6>
+                            <p class="small text-muted mb-0">Individually hallmarked 1 KG Gold Bars for maximum portability.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2 reveal-right text-center">
+                <img src="gold.jpeg" class="img-fluid img-feature mb-4" alt="Gold Refinery">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5 reveal-top" style="color: var(--brand-primary);">Why Partner with ATOM?</h2>
+            <div class="row g-4">
+                <div class="col-md-4 reveal-bottom">
+                    <div class="gold-card border-0 text-center">
+                        <i class="fas fa-chart-line fa-3x mb-3" style="color: var(--brand-gold);"></i>
+                        <h5 class="fw-bold">Global Liquidity</h5>
+                        <p class="small text-muted">Immediate resale potential in global financial markets.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal-bottom" style="transition-delay: 0.1s;">
+                    <div class="gold-card border-0 text-center">
+                        <i class="fas fa-lock fa-3x mb-3" style="color: var(--brand-gold);"></i>
+                        <h5 class="fw-bold">Capital Security</h5>
+                        <p class="small text-muted">A proven hedge against inflation and currency volatility.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal-bottom" style="transition-delay: 0.2s;">
+                    <div class="gold-card border-0 text-center">
+                        <i class="fas fa-truck-moving fa-3x mb-3" style="color: var(--brand-gold);"></i>
+                        <h5 class="fw-bold">Secure Logistics</h5>
+                        <p class="small text-muted">Comprehensive transport insurance and secure vaulting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <div class="p-4 p-md-5 rounded-4 shadow-lg text-center text-white reveal-bottom" style="background: linear-gradient(var(--brand-primary), var(--brand-dark)); border: 2px solid var(--brand-gold);">
+            <h2 class="fw-bold mb-3" style="color: var(--brand-gold-light);">Initiate Partnership</h2>
+            <p class="mb-4 opacity-75">Join our elite network of investors. Request our full procedure today.</p>
+            <a href="contact.html" class="btn btn-lg cta-gold shadow">CONTACT TRADE DESK</a>
+        </div>
+    </section>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">© 2009 ATOM Negoce & Consulting</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        ScrollReveal().reveal('.reveal-top', { distance: '40px', origin: 'top', duration: 1000 });
+        ScrollReveal().reveal('.reveal-bottom', { distance: '40px', origin: 'bottom', duration: 1000 });
+        ScrollReveal().reveal('.reveal-left', { distance: '60px', origin: 'left', duration: 1200 });
+        ScrollReveal().reveal('.reveal-right', { distance: '60px', origin: 'right', duration: 1200 });
+
+        window.onscroll = function() {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) nav.classList.add('navbar-sticky');
+            else nav.classList.remove('navbar-sticky');
+        };
+    </script>
+</body>
+</html>

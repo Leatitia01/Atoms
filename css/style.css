@@ -1,0 +1,137 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* Apply to body */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 70px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 70px;
+    scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 80vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    background: url('../istockphoto-1947499362-612x612.jpg') center center / cover no-repeat;
+    transition: all 0.6s ease-in-out;
+}
+
+/* Optional overlay if you want slight darkening for readability */
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2); /* Light overlay, remove or adjust if not needed */
+}
+
+/* Hero Text Content */
+.hero-section > div {
+    position: relative; /* Keep content above overlay */
+    z-index: 1;
+}
+
+.hero-sections {
+    height: 80vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    background: url('../srv.jpg') center center / cover no-repeat;
+    transition: all 0.6s ease-in-out;
+}
+
+/* Optional overlay if you want slight darkening for readability */
+.hero-sections::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2); /* Light overlay, remove or adjust if not needed */
+}
+
+/* Hero Text Content */
+.hero-sections > div {
+    position: relative; /* Keep content above overlay */
+    z-index: 1;
+}
+
+.about-card {
+    border-radius: 1rem;       /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0,128,0,0.2);  /* Shadow */
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,128,0,0.3);
+}
+
+a.text-success:hover {
+  color: #128C7E !important; /* WhatsApp green */
+  text-decoration: underline;
+}
+
+
+/* Rounded Cards */
+.mission-card, .service-card {
+  transition: transform 0.4s ease;
+}
+.mission-card:hover, .service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 128, 0, 0.1);
+}
+
+/* Circle Numbers */
+.circle {
+  width: 40px;
+  height: 40px;
+  background-color: #198754;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Navbar Shadow */
+.navbar {
+  transition: background-color 0.3s ease-in-out;
+}
+.navbar.scrolled {
+  background-color: #f8f9fa !important;
+}
+
+#formAlert {
+  transition: all 0.5s ease-in-out;
+  font-size: 1.1rem;
+}
+

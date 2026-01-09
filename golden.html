@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broiler Poultry Production | ATOM Negoce & Consulting</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <style>
+        :root {
+            --brand-primary: #0a192f; /* Deep Midnight Blue */
+            --brand-gold: #c5a059;    /* Metallic Gold */
+            --brand-gold-light: #e2c275;
+            --brand-dark: #050c16;
+        }
+
+        body { 
+            font-family: 'Segoe UI', Roboto, sans-serif; 
+            background-color: #fcfcfc; 
+            overflow-x: hidden; 
+            top: 0px !important; 
+        }
+
+        /* --- GOOGLE TRANSLATOR --- */
+        #google_translate_element { display: inline-block; vertical-align: middle; }
+        .goog-te-gadget-simple { 
+            background-color: rgba(255, 255, 255, 0.05) !important; 
+            border: 1px solid var(--brand-gold) !important; 
+            padding: 4px 8px !important; 
+            border-radius: 50px !important; 
+        }
+        .goog-te-gadget-simple span { color: white !important; font-size: 12px !important; }
+        .goog-te-banner-frame.skiptranslate { display: none !important; }
+
+        /* --- NAVIGATION --- */
+        .main-navbar { background-color: var(--brand-primary); padding: 15px 0; z-index: 1100; border-bottom: 2px solid var(--brand-gold); transition: 0.4s; }
+        .navbar-sticky { padding: 5px 0; background-color: var(--brand-dark) !important; position: fixed; top: 0; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+
+        @media (min-width: 992px) {
+            .navbar-nav { width: 42%; display: flex; align-items: center; }
+            .nav-left { justify-content: flex-end; }
+            .nav-right { justify-content: flex-start; }
+            .navbar-brand-center { width: 16%; display: flex; justify-content: center; position: relative; }
+            .logo-container {
+                width: 110px; height: 110px; background: white; border-radius: 50%;
+                display: flex; justify-content: center; align-items: center;
+                border: 4px solid var(--brand-gold); position: absolute; top: -35px; 
+                animation: logo-bounce 3s infinite ease-in-out;
+                z-index: 10;
+            }
+        }
+
+        @keyframes logo-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+        .logo-container img { width: 70%; }
+
+        /* --- HERO --- */
+        .hero-section {
+            height: 45vh;
+            background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(5, 12, 22, 0.9)), 
+                        url('https://images.unsplash.com/photo-1516391104263-bb301f4e8d21?auto=format&fit=crop&q=80');
+            background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; color: white; text-align: center;
+            border-bottom: 5px solid var(--brand-gold);
+        }
+
+        /* --- CONTENT CARDS --- */
+        .feature-card { 
+            background: white; border-radius: 20px; padding: 30px; 
+            border-bottom: 4px solid var(--brand-gold); height: 100%; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+            transition: 0.4s;
+        }
+        .feature-card:hover { transform: translateY(-12px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+
+        .img-rounded { border-radius: 25px; border: 3px solid var(--brand-gold); box-shadow: 0 15px 35px rgba(0,0,0,0.15); width: 100%; height: auto; transition: 0.5s; }
+        .img-rounded:hover { transform: scale(1.03); }
+
+        .stat-circle {
+            width: 80px; height: 80px; line-height: 80px; background: #fdfaf3;
+            border: 2px solid var(--brand-gold); border-radius: 50%;
+            display: inline-block; color: var(--brand-primary); font-weight: 800; margin-bottom: 15px;
+        }
+
+        .btn-gold {
+            background: var(--brand-gold); color: var(--brand-primary);
+            font-weight: 700; border-radius: 50px; padding: 12px 35px;
+            transition: 0.3s; border: none;
+        }
+        .btn-gold:hover { background: var(--brand-gold-light); transform: scale(1.05); color: var(--brand-dark); }
+
+        #scrollTop {
+            position: fixed; bottom: 30px; right: 30px; display: none;
+            width: 50px; height: 50px; border-radius: 50%; background: var(--brand-gold);
+            color: var(--brand-primary); border: none; z-index: 2000; cursor: pointer;
+        }
+
+        footer { background: var(--brand-dark); color: #888; padding: 40px 0; border-top: 4px solid var(--brand-gold); }
+
+        @media (max-width: 991px) {
+            .logo-container { width: 60px; height: 60px; border: 2px solid var(--brand-gold); }
+            .navbar-collapse { background: var(--brand-primary); padding: 20px; border-radius: 10px; border: 1px solid var(--brand-gold); margin-top: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <button id="scrollTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <nav class="main-navbar navbar navbar-expand-lg sticky-top" id="navbar">
+        <div class="container">
+            <button class="navbar-toggler border-0 order-last" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" style="background: var(--brand-gold);">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-brand-center">
+                <a href="index.html" class="logo-container">
+                    <img src="8769bb1d-ce11-4522-81ee-21a376e2b7f4.jpg" alt="ATOM">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav nav-left mt-3 mt-lg-0">
+                    <li class="nav-item"><a class="nav-link text-white fw-bold px-3" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-bold px-3" href="about.html">ABOUT</a></li>
+                </ul>
+                <ul class="navbar-nav nav-right">
+                    <li class="nav-item"><a class="nav-link text-white fw-bold px-3 active" href="explanation/agro.html">🔙TRADE</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-bold px-3 me-lg-3" href="contact.html">CONTACT</a></li>
+                    <li class="nav-item d-flex align-items-center"><div id="google_translate_element"></div></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="display-3 fw-bold reveal-top" style="color: var(--brand-gold-light);">Broiler Production Excellence</h1>
+            <p class="lead reveal-bottom fs-4 opacity-75">Scaling Poultry Industrialization in Central Africa</p>
+        </div>
+    </header>
+
+    
+
+    <section class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 reveal-left">
+                <h2 class="fw-bold mb-4" style="color: var(--brand-primary);">Project Vision</h2>
+                <p class="text-muted lead">To address the rising local and regional demand for high-quality protein, ATOM Negoce & Consulting is developing a state-of-the-art broiler production facility.</p>
+                
+                <div class="row g-3 mt-4">
+                    <div class="col-6">
+                        <div class="feature-card text-center">
+                            <div class="stat-circle">45</div>
+                            <h6 class="fw-bold">Day Cycle</h6>
+                            <p class="small text-muted mb-0">Optimized growth periods.</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="feature-card text-center">
+                            <div class="stat-circle">100%</div>
+                            <h6 class="fw-bold">Bio-Secure</h6>
+                            <p class="small text-muted mb-0">Strict health protocols.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 reveal-right">
+                <img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&q=80" class="img-rounded" alt="Poultry Production">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5 reveal-top" style="color: var(--brand-primary);">Industrial Integrated Chain</h2>
+            <div class="row g-4">
+                <div class="col-md-4 reveal-bottom">
+                    <div class="feature-card">
+                        <i class="fas fa-egg fa-2x mb-3" style="color: var(--brand-gold);"></i>
+                        <h5 class="fw-bold">Modern Hatchery</h5>
+                        <p class="small text-muted">In-house incubation and hatching to ensure the highest survival rates and genetic quality of chicks.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal-bottom" style="transition-delay: 0.1s;">
+                    <div class="feature-card">
+                        <i class="fas fa-leaf fa-2x mb-3" style="color: var(--brand-gold);"></i>
+                        <h5 class="fw-bold">Feed Formulation</h5>
+                        <p class="small text-muted">Integrated feed mill using locally sourced corn and soy to control costs and nutritional standards.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal-bottom" style="transition-delay: 0.2s;">
+                    <div class="feature-card">
+                        <i class="fas fa-snowflake fa-2x mb-3" style="color: var(--brand-gold);"></i>
+                        <h5 class="fw-bold">Cold Chain Supply</h5>
+                        <p class="small text-muted">Professional slaughterhouse and refrigerated logistics to deliver farm-fresh chicken to retailers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5 text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-9 reveal-top">
+                <div class="p-5 rounded-4 shadow-lg text-white" style="background: linear-gradient(var(--brand-primary), var(--brand-dark)); border: 2px solid var(--brand-gold);">
+                    <h2 class="fw-bold mb-3" style="color: var(--brand-gold-light);">Investment Opportunities</h2>
+                    <p class="mb-4 opacity-75">We are seeking partners for the expansion of our poultry units and industrial processing equipment. Join us in securing food sovereignty in the region.</p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="contact.html" class="btn btn-gold btn-lg">Partner With Us</a>
+                        <a href="explanation/agro.html" class="btn btn-outline-light btn-lg rounded-pill px-4">View All Agro Projects</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">© 2026 ATOM Negoce & Consulting | Animal Husbandry Division</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        ScrollReveal().reveal('.reveal-top', { distance: '40px', origin: 'top', duration: 1000 });
+        ScrollReveal().reveal('.reveal-bottom', { distance: '40px', origin: 'bottom', duration: 1000 });
+        ScrollReveal().reveal('.reveal-left', { distance: '60px', origin: 'left', duration: 1200 });
+        ScrollReveal().reveal('.reveal-right', { distance: '60px', origin: 'right', duration: 1200 });
+
+        window.onscroll = function() {
+            const nav = document.getElementById('navbar');
+            const btn = document.getElementById('scrollTop');
+            if (window.scrollY > 50) { 
+                nav.classList.add('navbar-sticky'); btn.style.display = "block";
+            } else { 
+                nav.classList.remove('navbar-sticky'); btn.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>

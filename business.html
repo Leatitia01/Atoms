@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services & Opportunities | ATOM Negoce & Consulting</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <style>
+        :root {
+            --brand-primary: #0044cc; /* Electric Blue from screenshot */
+            --brand-secondary: #00d4ff; /* Cyan Highlight */
+            --brand-dark: #14172B; /* Dark Blue from screenshot */
+            --navbar-blue: #0044cc;
+        }
+
+        body { font-family: 'Segoe UI', Roboto, sans-serif; background-color: #fcfcfc; overflow-x: hidden; top: 0px !important; }
+
+        /* --- NAVIGATION --- */
+        .main-navbar { background-color: var(--navbar-blue); padding: 15px 0; z-index: 1100; border-bottom: 1px solid rgba(255,255,255,0.1); transition: 0.4s; }
+        .navbar-sticky { padding: 8px 0; background-color: var(--brand-dark) !important; position: fixed; top: 0; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+
+        .logo-container {
+            width: 100px; height: 100px; background: white; border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            border: 3px solid var(--brand-secondary); transition: 0.4s;
+        }
+        .logo-container img { width: 70%; }
+
+        @media (min-width: 992px) {
+            .navbar-nav { width: 42%; display: flex; align-items: center; }
+            .nav-left { justify-content: flex-end; }
+            .nav-right { justify-content: flex-start; }
+            .navbar-brand-center { width: 16%; display: flex; justify-content: center; position: relative; }
+            .logo-container { position: absolute; top: -30px; animation: logo-glow 3s infinite ease-in-out; }
+        }
+
+        @keyframes logo-glow { 0%, 100% { box-shadow: 0 0 10px var(--brand-secondary); } 50% { box-shadow: 0 0 25px var(--brand-secondary); } }
+
+        /* --- GOOGLE TRANSLATOR ANIMATION --- */
+        #google_translate_element { margin-left: 15px; }
+        .goog-te-gadget-simple { 
+            background: rgba(255,255,255,0.1) !important; 
+            border: 1px solid var(--brand-secondary) !important; 
+            padding: 5px 12px !important; 
+            border-radius: 30px !important; 
+            transition: 0.3s;
+        }
+        .goog-te-gadget-simple:hover { background: var(--brand-secondary) !important; transform: translateY(-2px); }
+        .goog-te-gadget-simple span { color: white !important; font-size: 12px; }
+
+        /* --- HERO --- */
+        .page-header {
+            background: linear-gradient(rgba(20, 23, 43, 0.8), rgba(0, 68, 204, 0.7)), 
+                        url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80');
+            background-size: cover; background-position: center; 
+            color: white; padding: 120px 0; text-align: center;
+        }
+
+        /* --- SERVICE CARDS --- */
+        .service-box {
+            background: white; border-radius: 20px; padding: 40px 25px; height: 100%;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); border: 1px solid #eee;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .service-box:hover { transform: translateY(-10px); border-color: var(--brand-secondary); }
+
+        .icon-circle {
+            width: 70px; height: 70px; background: var(--brand-primary); color: white;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 1.8rem; margin: 0 auto 25px; transition: 0.4s;
+        }
+        .service-box:hover .icon-circle { background: var(--brand-secondary); transform: rotateY(180deg); }
+
+        /* --- WHY CHOOSE US (Screenshot Style) --- */
+        .why-choose-us { background-color: var(--brand-dark); color: white; padding: 80px 0; }
+        .feature-card { background: rgba(255,255,255,0.05); padding: 30px; border-radius: 15px; height: 100%; }
+        .feature-card i { color: var(--brand-secondary); margin-bottom: 20px; }
+
+        /* --- FOOTER CARD --- */
+        .contact-card { background: white; border-radius: 20px; padding: 40px; border-left: 6px solid var(--brand-primary); }
+
+        footer { background: var(--brand-dark); color: rgba(255,255,255,0.5); padding: 30px 0; }
+    </style>
+</head>
+<body>
+
+    <nav class="main-navbar navbar navbar-expand-lg sticky-top" id="navbar">
+        <div class="container">
+            <button class="navbar-toggler border-0 order-last" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" style="background: var(--brand-secondary);">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-brand-center">
+                <a href="index.html" class="logo-container">
+                    <img src="8769bb1d-ce11-4522-81ee-21a376e2b7f4.jpg" alt="ATOM">
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse text-center" id="navContent">
+                <ul class="navbar-nav nav-left mt-3 mt-lg-0">
+                    <li class="nav-item"><a class="nav-link text-white fw-bold px-3" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-bold px-3" href="about.html">ABOUT</a></li>
+                </ul>
+                <ul class="navbar-nav nav-right">
+                    <li class="nav-item"><a class="nav-link text-white fw-bold px-3 active" href="services.html">SERVICES</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-bold px-3" href="contact.html">CONTACT</a></li>
+                    <li class="nav-item d-flex justify-content-center"><div id="google_translate_element"></div></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="display-3 fw-bold reveal-top">Expertise & Strategy</h1>
+            <p class="lead reveal-bottom fs-4 opacity-75">Your Gateway to International Trade & Compliance</p>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4 mt-2">
+                <div class="col-md-4 reveal-left">
+                    <div class="service-box text-center">
+                        <div class="icon-circle"><i class="fas fa-ship"></i></div>
+                        <h4 class="fw-bold">International Trade</h4>
+                        <p class="text-muted">Global sourcing and logistics (FOB, CIF) managing complex customs standards for smooth operations.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal-bottom">
+                    <div class="service-box text-center">
+                        <div class="icon-circle"><i class="fas fa-briefcase"></i></div>
+                        <h4 class="fw-bold">Strategic Consulting</h4>
+                        <p class="text-muted">Providing market intelligence and pricing strategies to ensure high-impact entries into new sectors.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal-right">
+                    <div class="service-box text-center">
+                        <div class="icon-circle"><i class="fas fa-users-cog"></i></div>
+                        <h4 class="fw-bold">Partnership Dev</h4>
+                        <p class="text-muted">Connecting global producers with reliable buyers through iron-clad industrial contracts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="text-center mb-5 reveal-top">
+                <h2 class="display-5 fw-bold mb-3">Why Choose ATOM?</h2>
+                <div class="mx-auto" style="height: 3px; width: 80px; background: var(--brand-secondary);"></div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4 reveal-left">
+                    <div class="feature-card text-center">
+                        <i class="fas fa-network-wired fa-3x"></i>
+                        <h5>Global Reach</h5>
+                        <p class="small opacity-75">Active trade routes across Africa, Asia, Middle East, and Europe.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal-bottom">
+                    <div class="feature-card text-center">
+                        <i class="fas fa-shield-alt fa-3x"></i>
+                        <h5>Full Compliance</h5>
+                        <p class="small opacity-75">Strict adherence to legal risk management and international certifications.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal-right">
+                    <div class="feature-card text-center">
+                        <i class="fas fa-gem fa-3x"></i>
+                        <h5>Premium Assets</h5>
+                        <p class="small opacity-75">Specialized expertise in high-value commodities and industrial growth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="contact-card shadow-lg reveal-bottom">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <h4 class="fw-bold text-primary mb-4">Official Identification</h4>
+                        <p class="mb-2"><strong>RCCM:</strong> CM-YAO-07-2025-A13-1009</p>
+                        <p class="mb-2"><strong>NIU:</strong> M072517871820S</p>
+                        <p><strong>BP:</strong> 7328, Yaoundé</p>
+                    </div>
+                    <div class="col-md-6 border-start ps-lg-5">
+                        <h4 class="fw-bold text-primary mb-4">Headquarters</h4>
+                        <p><i class="fas fa-map-marker-alt text-secondary me-2"></i> Poste Centrale, Opposite Camtel Building, Yaoundé</p>
+                        <p><i class="fas fa-envelope text-secondary me-2"></i> courriel@atnegco.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">© 2026 ATOM Negoce & Consulting | Empowering Global Trade</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        ScrollReveal().reveal('.reveal-top', { distance: '40px', origin: 'top', duration: 1000 });
+        ScrollReveal().reveal('.reveal-bottom', { distance: '40px', origin: 'bottom', duration: 1000 });
+        ScrollReveal().reveal('.reveal-left', { distance: '60px', origin: 'left', duration: 1200 });
+        ScrollReveal().reveal('.reveal-right', { distance: '60px', origin: 'right', duration: 1200 });
+
+        window.onscroll = function() {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) nav.classList.add('navbar-sticky');
+            else nav.classList.remove('navbar-sticky');
+        };
+    </script>
+</body>
+</html>

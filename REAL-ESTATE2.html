@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Partnership | ATOM Negoce & Consulting</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <style>
+        :root {
+            --brand-dark: #14172B;   /* Midnight Blue */
+            --brand-gold: #D4AF37;   /* Premium Gold */
+            --brand-gold-hover: #F9E27E;
+            --bg-light: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            overflow-x: hidden;
+            top: 0px !important; /* Fix for Google Translate bar */
+        }
+
+        /* --- GLOBAL TRANSLATOR --- */
+        #google_translate_element { margin-left: 15px; }
+        .goog-te-gadget-simple {
+            background-color: rgba(255,255,255,0.1) !important;
+            border: 1px solid var(--brand-gold) !important;
+            padding: 5px 10px !important;
+            border-radius: 30px !important;
+        }
+        .goog-te-gadget-simple span { color: white !important; font-size: 12px; font-weight: 600; }
+        .goog-te-menu-frame { box-shadow: 0 10px 25px rgba(0,0,0,0.2) !important; }
+
+        /* --- NAVIGATION --- */
+        .main-navbar { 
+            background-color: var(--brand-dark); 
+            padding: 20px 0; 
+            z-index: 1100; 
+            transition: 0.4s; 
+            border-bottom: 3px solid var(--brand-gold);
+        }
+        .navbar-sticky { 
+            padding: 10px 0; 
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+        }
+
+        @media (min-width: 992px) {
+            .navbar-nav { width: 42%; display: flex; align-items: center; }
+            .nav-left { justify-content: flex-end; }
+            .nav-right { justify-content: flex-start; }
+            .navbar-brand-center { width: 16%; display: flex; justify-content: center; position: relative; }
+            .logo-container {
+                width: 110px; height: 110px; background: white; border-radius: 50%;
+                display: flex; justify-content: center; align-items: center;
+                border: 4px solid var(--brand-gold); position: absolute; top: -30px; 
+                animation: logo-glow 3s infinite ease-in-out;
+            }
+        }
+        
+        .nav-link { color: white !important; font-size: 0.9rem; letter-spacing: 1px; }
+        .nav-link:hover { color: var(--brand-gold) !important; }
+
+        @keyframes logo-glow { 
+            0%, 100% { box-shadow: 0 0 10px var(--brand-gold); transform: translateY(0); } 
+            50% { box-shadow: 0 0 25px var(--brand-gold); transform: translateY(-5px); } 
+        }
+
+        .logo-container img { width: 75%; }
+
+        /* --- SCROLL TO TOP --- */
+        #scrollTop {
+            position: fixed; bottom: 30px; right: 30px; display: none;
+            width: 50px; height: 50px; border-radius: 50%; background: var(--brand-gold);
+            color: var(--brand-dark); border: none; z-index: 2000; transition: 0.3s;
+        }
+
+        /* --- HERO --- */
+        .hero-section {
+            height: 45vh;
+            background: linear-gradient(rgba(20, 23, 43, 0.85), rgba(20, 23, 43, 0.7)), 
+                        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80');
+            background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; color: white;
+        }
+        .hero-title { border-bottom: 4px solid var(--brand-gold); display: inline-block; padding-bottom: 10px; }
+
+        /* --- CONTENT STYLES --- */
+        .info-card { background: white; border-radius: 20px; padding: 35px; border-top: 5px solid var(--brand-gold); box-shadow: 0 15px 35px rgba(0,0,0,0.08); height: 100%; transition: 0.4s; }
+        .info-card:hover { transform: translateY(-10px); }
+        .text-gold { color: var(--brand-gold) !important; }
+        
+        .doc-list-item { 
+            display: flex; align-items: center; background: #fffdf5; padding: 15px 20px; 
+            border-radius: 12px; margin-bottom: 12px; font-weight: 600; color: var(--brand-dark); 
+            border: 1px solid #f2e6c2; transition: 0.3s;
+        }
+        .doc-list-item:hover { background: var(--brand-gold); color: white; }
+
+        .cta-box { background: var(--brand-dark); color: white; border-radius: 30px; padding: 50px; border: 2px solid var(--brand-gold); }
+        .btn-gold { background: var(--brand-gold); color: var(--brand-dark); font-weight: 700; border-radius: 50px; transition: 0.3s; }
+        .btn-gold:hover { background: white; color: var(--brand-dark); transform: scale(1.05); }
+
+        footer { background: #0a0c14; color: #fff; padding: 40px 0; border-top: 2px solid var(--brand-gold); }
+    </style>
+</head>
+<body>
+
+    <button id="scrollTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <nav class="main-navbar navbar navbar-expand-lg sticky-top" id="navbar">
+        <div class="container">
+            <button class="navbar-toggler border-0 order-last" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" style="background: var(--brand-gold);">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-brand-center">
+                <a href="index.html" class="logo-container">
+                    <img src="8769bb1d-ce11-4522-81ee-21a376e2b7f4.jpg" alt="ATOM">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav nav-left mt-3 mt-lg-0">
+                    <li class="nav-item"><a class="nav-link px-3" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="about.html">ABOUT</a></li>
+                </ul>
+                <ul class="navbar-nav nav-right">
+                    <li class="nav-item"><a class="nav-link px-3" href="offers.html">🔙PARTNERSHIP</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="contact.html">CONTACT</a></li>
+                    <li class="nav-item" id="google_translate_element"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-3 fw-bold reveal-top hero-title">Real Estate Partnership</h1>
+            <p class="lead mt-3 reveal-bottom text-uppercase tracking-widest" style="letter-spacing: 3px;">Strategic 4-Hectare Land Opportunity</p>
+        </div>
+    </header>
+
+    <section class="container py-5">
+        <div class="row g-4">
+            <div class="col-lg-6 reveal-left">
+                <div class="info-card">
+                    <h3 class="fw-bold text-gold mb-4"><i class="fas fa-layer-group me-2"></i>Property Overview</h3>
+                    <p class="fs-5"><strong>Total Area:</strong> 4 Hectares (40,000 m²)</p>
+                    <p class="fs-5"><strong>Document Status:</strong> <span class="badge bg-success">Fully Compliant</span></p>
+                    <p class="text-muted mb-4 italic">Includes: Land Title, Occupancy Certificate, and Ownership Deeds.</p>
+                    <h5 class="fw-bold mt-4"><i class="fas fa-map-marked-alt text-danger me-2"></i>Strategic Location</h5>
+                    <p>Situated in a high-growth corridor of Yaoundé. This land is positioned in a dynamic economic zone perfect for large-scale development and rapid appreciation.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 reveal-right">
+                <div class="info-card">
+                    <h3 class="fw-bold text-gold mb-4"><i class="fas fa-chart-line me-2"></i>Investment Advantages</h3>
+                    <ul class="list-unstyled fs-5">
+                        <li class="mb-3"><i class="fas fa-check-circle text-gold me-2"></i> Zero construction disputes / Ready to build</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-gold me-2"></i> High demand for premium residential space</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-gold me-2"></i> Proximity to major public infrastructure</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-gold me-2"></i> Exceptional ROI potential for developers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5 reveal-top">Development Pathways</h2>
+            <div class="row g-4">
+                <div class="col-md-4 reveal-bottom">
+                    <div class="info-card text-center border-0 shadow-sm">
+                        <i class="fas fa-city fa-3x text-gold mb-3"></i>
+                        <h4 class="fw-bold">Residential</h4>
+                        <p class="text-muted">Luxury housing estates, gated communities, or high-rise apartment complexes.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal-bottom" style="transition-delay: 0.2s;">
+                    <div class="info-card text-center border-0 shadow-sm">
+                        <i class="fas fa-hotel fa-3x text-gold mb-3"></i>
+                        <h4 class="fw-bold">Commercial</h4>
+                        <p class="text-muted">Shopping malls, Business hotels, Office towers, and Hospitality ventures.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal-bottom" style="transition-delay: 0.4s;">
+                    <div class="info-card text-center border-0 shadow-sm">
+                        <i class="fas fa-industry fa-3x text-gold mb-3"></i>
+                        <h4 class="fw-bold">Industrial</h4>
+                        <p class="text-muted">Modern logistics hubs, climate-controlled warehousing, and light production.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5 mb-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6 reveal-left">
+                <h3 class="fw-bold mb-4">Verification Documents</h3>
+                <div class="doc-list-item"><i class="fas fa-shield-alt me-3"></i> Authenticated Land Title</div>
+                <div class="doc-list-item"><i class="fas fa-map me-3"></i> Certified Topographical Survey</div>
+                <div class="doc-list-item"><i class="fas fa-stamp me-3"></i> Legal Ownership Deeds</div>
+                <p class="mt-4 fw-bold text-gold"><i class="fas fa-calendar-check me-2"></i> Site viewings scheduled upon request.</p>
+            </div>
+            <div class="col-lg-6 reveal-right">
+                <div class="cta-box text-center shadow-lg">
+                    <h2 class="fw-bold mb-3">Secure Your Interest</h2>
+                    <p class="mb-4">Contact our consulting team to receive the full investment brief and schedule a site visit.</p>
+                    <a href="contact.html" class="btn btn-gold btn-lg px-5">Request Documentation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">© 2009 ATOM Negoce & Consulting SARL</p>
+            <p class="small text-muted">Excellence in Strategic Business Development</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,fr,es,zh-CN,de', // Eng, French, Spanish, Chinese, German
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Animations
+        ScrollReveal().reveal('.reveal-top', { distance: '40px', origin: 'top', duration: 1000 });
+        ScrollReveal().reveal('.reveal-bottom', { distance: '40px', origin: 'bottom', duration: 1000 });
+        ScrollReveal().reveal('.reveal-left', { distance: '60px', origin: 'left', duration: 1200 });
+        ScrollReveal().reveal('.reveal-right', { distance: '60px', origin: 'right', duration: 1200 });
+
+        // Sticky Navbar and Scroll Button
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('navbar');
+            const scrollBtn = document.getElementById('scrollTop');
+            
+            if (window.scrollY > 50) { 
+                nav.classList.add('navbar-sticky'); 
+                scrollBtn.style.display = 'block';
+            } else { 
+                nav.classList.remove('navbar-sticky'); 
+                scrollBtn.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

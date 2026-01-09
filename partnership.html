@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seeking International Suppliers | ATOM Negoce & Consulting</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <style>
+        :root {
+            --brand-primary: #0044cc;
+            --brand-secondary: #00aaff;
+            --brand-dark: #14172B;
+            --gold-accent: #D4AF37; /* For subtle highlights, maintaining a premium feel */
+        }
+
+        body { font-family: 'Segoe UI', Roboto, sans-serif; background-color: #fcfcfc; overflow-x: hidden; }
+
+        /* --- GLOBAL TRANSLATOR --- */
+        #google_translate_element { margin-left: 15px; }
+        .goog-te-gadget-simple { background-color: transparent !important; border: 1px solid rgba(255,255,255,0.4) !important; padding: 4px 8px !important; border-radius: 20px !important; }
+        .goog-te-gadget-simple span { color: white !important; font-size: 11px; }
+
+        /* --- NAVIGATION: ADAPTIVE LOGO --- */
+        .main-navbar { background-color: var(--brand-primary); padding: 15px 0; z-index: 1100; transition: 0.4s; }
+        .navbar-sticky { padding: 5px 0; background-color: rgba(20, 23, 43, 0.98) !important; position: fixed; top: 0; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+
+        @media (min-width: 992px) {
+            .navbar-nav { width: 42%; display: flex; align-items: center; }
+            .nav-left { justify-content: flex-end; }
+            .nav-right { justify-content: flex-start; }
+            .navbar-brand-center { width: 16%; display: flex; justify-content: center; position: relative; }
+            .logo-container {
+                width: 120px; height: 120px; background: white; border-radius: 50%;
+                display: flex; justify-content: center; align-items: center;
+                border: 4px solid var(--gold-accent); position: absolute; top: -35px; 
+                animation: logo-bounce 3s infinite ease-in-out;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .navbar-brand-center { order: -1; margin-right: auto; }
+            .logo-container { width: 60px; height: 60px; background: white; border-radius: 50%; display: flex; justify-content: center; align-items: center; border: 2px solid var(--gold-accent); }
+            .navbar-collapse { background: var(--brand-dark); padding: 20px; border-radius: 10px; margin-top: 10px; }
+        }
+
+        @keyframes logo-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+        .logo-container img { width: 70%; }
+
+        /* --- SCROLL BUTTON --- */
+        #scrollTop {
+            position: fixed; bottom: 30px; right: 30px; display: none;
+            width: 50px; height: 50px; border-radius: 50%; background: var(--gold-accent);
+            color: white; border: none; z-index: 2000; cursor: pointer; transition: 0.3s;
+        }
+
+        /* --- HERO --- */
+        .hero-section {
+            height: 45vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('PEN.jpeg'); /* African market or cargo */
+            background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; color: white;
+        }
+
+        /* --- CONTENT CARDS & UI --- */
+        .info-card { background: white; border-radius: 15px; padding: 25px; border-left: 4px solid var(--gold-accent); height: 100%; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+        .product-item { background: #f8f9fa; border-radius: 8px; padding: 10px 15px; margin-bottom: 8px; font-weight: 500; display: flex; align-items: center; border: 1px solid #eee; }
+        .product-item i { color: var(--brand-primary); margin-right: 10px; }
+        
+        .partnership-benefit { background: #fffdf5; border: 1px solid #f9e29c; border-radius: 10px; padding: 15px; margin-bottom: 10px; transition: 0.3s; }
+        .partnership-benefit i { color: var(--gold-accent); margin-right: 12px; }
+
+        .cta-gold-style { background: linear-gradient(135deg, var(--gold-accent) 0%, #F9E29C 50%, #B8860B 100%); color: #443400 !important; border: none; border-radius: 50px; font-weight: 700; padding: 12px 40px; text-decoration: none; display: inline-block; transition: 0.3s; }
+        .cta-gold-style:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+
+        footer { background: #111; color: #888; padding: 40px 0; }
+    </style>
+</head>
+<body>
+
+    <button id="scrollTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <nav class="main-navbar navbar navbar-expand-lg sticky-top" id="navbar">
+        <div class="container d-flex align-items-center">
+            <button class="navbar-toggler border-0 order-last" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" style="background: white;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-brand-center">
+                <a href="index.html" class="logo-container">
+                    <img src="8769bb1d-ce11-4522-81ee-21a376e2b7f4.jpg" alt="ATOM">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav nav-left mt-3 mt-lg-0">
+                    <li class="nav-item"><a class="nav-link text-white fw-bold px-3" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-bold px-3" href="about.html">ABOUT</a></li>
+                </ul>
+                <ul class="navbar-nav nav-right">
+                    <li class="nav-item"><a class="nav-link text-white fw-bold px-3 active" href="supplier-partnership.html">SUPPLIERS</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-bold px-3" href="contact.html">CONTACT</a></li>
+                    <li class="nav-item" id="google_translate_element"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold reveal-top"><b style="color: #D4AF37;">Seeking</b> International <b style="color: #0044cc;">Suppliers</b></h1>
+            <p class="lead reveal-bottom">Exclusive Distribution Partnership for the African Market</p>
+        </div>
+    </header>
+
+    <section class="container py-5">
+        <div class="row g-4">
+            <div class="col-lg-6 reveal-left">
+                <h3 class="fw-bold text-primary mb-4">Our Priority Areas</h3>
+                <div class="info-card">
+                    <p class="lead">We are seeking partners for:</p>
+                    <div class="product-item"><i class="fas fa-seedling"></i> Rice (all varieties: broken, long grain, fragrant, parboiled)</div>
+                    <div class="product-item"><i class="fas fa-oil-can"></i> Vegetable Oils (sunflower, palm, soybean, peanut)</div>
+                    <div class="product-item"><i class="fas fa-solar-panel"></i> Solar Panels & Photovoltaic Equipment</div>
+                    <div class="product-item"><i class="fas fa-cubes"></i> Miscellaneous Commodities (sugar, flour, cement, fertilizers)</div>
+                    <div class="product-item"><i class="fas fa-plug"></i> Electrical Equipment & Household Products</div>
+                </div>
+            </div>
+            <div class="col-lg-6 reveal-right">
+                <h3 class="fw-bold text-primary mb-4">Our Profile & Strengths</h3>
+                <div class="info-card">
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><i class="fas fa-network-wired text-gold-accent me-2"></i> Active distribution network across several African countries.</li>
+                        <li class="mb-3"><i class="fas fa-handshake text-gold-accent me-2"></i> Strong partnerships with wholesalers in major capital cities.</li>
+                        <li class="mb-3"><i class="fas fa-chart-area text-gold-accent me-2"></i> Deep understanding of African market needs and dynamics.</li>
+                        <li class="mb-3"><i class="fas fa-warehouse text-gold-accent me-2"></i> Capacity for import, logistics, distribution, and promotion.</li>
+                        <li class="mb-3"><i class="fas fa-users-cog text-gold-accent me-2"></i> Dedicated sales, logistics, and marketing teams.</li>
+                        <li class="mb-3"><i class="fas fa-building text-gold-accent me-2"></i> Diverse client portfolio: supermarkets, governments, businesses.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <h2 class="text-center fw-bold mb-5 reveal-top">Why Partner with ATOM Negoce?</h2>
+        <div class="row g-4 align-items-center">
+            <div class="col-lg-6 reveal-left">
+                
+                <p class="lead text-muted">Leverage our extensive reach to penetrate the African market efficiently.</p>
+                <div class="partnership-benefit"><i class="fas fa-globe"></i> Immediate commercial presence without setup costs.</div>
+                <div class="partnership-benefit"><i class="fas fa-chart-bar"></i> Opportunity to sell large volumes through established channels.</div>
+                <div class="partnership-benefit"><i class="fas fa-bullhorn"></i> Marketing, communication, and brand implementation support.</div>
+                <div class="partnership-benefit"><i class="fas fa-stream"></i> Simplified operations with a single point of contact.</div>
+            </div>
+            <div class="col-lg-6 text-center reveal-right">
+                <p>ATOM Negoce & Consulting: Your gateway to Africa.</p>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5 reveal-top">Proposed Collaboration Models</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3 reveal-bottom">
+                    <div class="info-card text-center" style="border-left-color: var(--brand-primary);">
+                        <i class="fas fa-star fa-2x text-primary mb-3"></i>
+                        <h5>Exclusive Representation</h5>
+                        <p class="small text-muted">Mandate us to exclusively represent and distribute your products.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 reveal-bottom" style="transition-delay: 0.2s;">
+                    <div class="info-card text-center" style="border-left-color: var(--brand-secondary);">
+                        <i class="fas fa-boxes fa-2x text-secondary mb-3"></i>
+                        <h5>Standard Distribution</h5>
+                        <p class="small text-muted">Direct wholesale purchase with recurring monthly/quarterly orders.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 reveal-bottom" style="transition-delay: 0.4s;">
+                    <div class="info-card text-center" style="border-left-color: var(--gold-accent);">
+                        <i class="fas fa-warehouse fa-2x text-gold-accent mb-3"></i>
+                        <h5>Warehouse - Forward Stock</h5>
+                        <p class="small text-muted">Buffer stock setup for accelerated distribution (optional).</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 reveal-bottom" style="transition-delay: 0.6s;">
+                    <div class="info-card text-center" style="border-left-color: var(--bean-brown);">
+                        <i class="fas fa-lightbulb fa-2x text-bean-brown mb-3"></i>
+                        <h5>Brand Co-development</h5>
+                        <p class="small text-muted">Adaptation or creation of a brand specifically for the African market.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <h2 class="text-center fw-bold mb-5 reveal-top">General Product Specifications</h2>
+        <div class="row g-4">
+            <div class="col-lg-6 reveal-left">
+                <div class="info-card">
+                    <h5 class="fw-bold text-primary mb-3">Rice & Vegetable Oils</h5>
+                    <div class="product-item"><i class="fas fa-certificate"></i> Rice: SGS or equivalent, 5kg-50kg bags, various origins.</div>
+                    <div class="product-item"><i class="fas fa-fill-drip"></i> Vegetable Oil: Refined, 1L, 5L, 20L containers, export quality.</div>
+                </div>
+            </div>
+            <div class="col-lg-6 reveal-right">
+                <div class="info-card">
+                    <h5 class="fw-bold text-primary mb-3">Solar & Commodities</h5>
+                    <div class="product-item"><i class="fas fa-solar-panel"></i> Solar Panels: 350W-550W (Tier 1), inverters, batteries, kits.</div>
+                    <div class="product-item"><i class="fas fa-boxes"></i> Commodities: ICUMSA Sugar, T45/T55/T65 Flour, Cement, NPK/Urea Fertilizer.</div>
+                    <div class="product-item"><i class="fas fa-tools"></i> Electrical Equipment, Household Goods (flexible list).</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <div class="p-5 rounded-4 shadow-lg text-center bg-white border reveal-bottom">
+            <h2 class="fw-bold mb-3">Let's Build a Win-Win Partnership</h2>
+            <p class="lead mb-4">We seek serious, reliable, and competitive partners for long-term growth in Africa.</p>
+            <a href="contact.html" class="cta-gold-style shadow">INITIATE PARTNERSHIP</a>
+        </div>
+    </section>
+
+    <footer class="text-center">
+        <p class="mb-0">© 2026 ATOM Negoce & Consulting | Your Gateway to African Markets</p>
+    </footer>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,fr,es,ar,zh-CN,tr',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        ScrollReveal().reveal('.reveal-top', { distance: '30px', origin: 'top', duration: 800 });
+        ScrollReveal().reveal('.reveal-bottom', { distance: '30px', origin: 'bottom', duration: 800 });
+        ScrollReveal().reveal('.reveal-left', { distance: '50px', origin: 'left', duration: 1000 });
+        ScrollReveal().reveal('.reveal-right', { distance: '50px', origin: 'right', duration: 1000 });
+
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('navbar');
+            const scrollBtn = document.getElementById('scrollTop');
+            if (window.scrollY > 50) { nav.classList.add('navbar-sticky'); scrollBtn.style.display = "block"; }
+            else { nav.classList.remove('navbar-sticky'); scrollBtn.style.display = "none"; }
+        });
+    </script>
+</body>
+</html>
